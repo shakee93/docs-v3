@@ -1,0 +1,127 @@
+---
+title: Critical CSS
+--- 
+
+import { Callout } from 'nextra/components'
+
+## What is Critical CSS?   
+
+Critical CSS is the essential part of your website's styling needed to display the visible (above-the-fold) content immediately. 
+By embedding these critical styles directly into your webpage, you can ensure the main content loads quickly, even before all
+CSS files are fully downloaded.
+
+**Benefits of Critical CSS generations include:**  
+
+- Faster page loading times by reducing unnecessary delays.
+- A smoother experience for visitors, especially on slower networks or devices.
+- Improved first impressions with content visible right away.
+- With RapidLoad, setting up Critical CSS is simple and helps boost your website's performance effortlessly.
+
+**Boost Your PageSpeed Insights Score:**  
+
+The Critical CSS feature in RapidLoad directly improves your website’s performance by addressing two key PageSpeed Insights recommendations:
+
+1. **Eliminate Render-Blocking Resources**
+2. **Reduce Unused CSS**
+
+This feature enhances metrics like **First Contentful Paint (FCP)** and **Largest Contentful Paint (LCP)**, 
+improving Core Web Vitals and delivering a faster, more user-friendly website experience.
+
+## Here's how RapidLoad Critical CSS works:
+
+1. RapidLoad scans your page's structure (the DOM) to find all the CSS files linked to that page.  
+2. Once it has the CSS files, RapidLoad identifies which styles are used to display the content visible on the screen when the page first loads (above-the-fold content).  
+3. We will generate Critical CSS parallelly for mobile and desktop with separate files for each version. It will then identify the device and serve the specific files for each
+4. These styles are then filtered out and placed directly into the page's HTML as inline CSS, ensuring the page loads faster and looks complete as soon as possible. 
+
+The whole process runs **automatically**, making it hassle-free for you!
+
+## How to Enable Critical CSS in RapidLoad  
+
+(img)
+
+1. Go to the **Optimize** tab in the RapidLoad plugin
+2. Click on the **Customize Settings** dropdown
+3. Under the CSS section, find and enable the Critical CSS option by checking the box.
+4. Click **Save Changes** to apply the settings
+ 
+<Callout type="error" emoji="️📌">
+* Why did Critical CSS fail to generate?  
+    *   Critical CSS generation can fail due to authentication issues, firewall 
+    restrictions, Cloudflare bots, or other factors.Follow this _link_ for 
+    details and solutions.
+* Why was Critical CSS waiting for a long time?
+    *   This may happen if CRON is not functioning properly.Follow this _link_ 
+    for more details.
+</Callout>
+
+## How to check if RapidLoad Critical CSS is generated
+(img)
+  
+1. **In the optimizer**: You will see a green bullet point and the text 
+"*Optimized*," indicating the RapidLoad Critical CSS file is generated and served 
+on your site.
+(img)
+
+2. To verify if Critical CSS is working on a **specific page** :
+(img)
+
+    * **View the page as a logged-out user** : Make sure you're not logged into 
+    the WordPress backend when accessing the page. If you prefer not to log out, 
+    you can open the page in Incognito mode instead.
+
+    * **Open Inspect**: Right-click on the page and select "_Inspect_" 
+    (or press `Ctrl + Shift + I` on Windows, `Cmd + Option + I` on Mac).
+
+    * **Check for Inline CSS** : In the "_Elements_" tab, look for the `<style>` 
+    tag containing the ID `rapidload-critical-css`. This confirms that the 
+    ritical CSS is successfully generated and served.
+
+    * **Check Device-Specific CSS**:
+        *   On the desktop version, you’ll see the attribute 
+        `data-mode="desktop"` within the `<style>` tag.
+        *   On mobile, the attribute will display as `data-mode="mobile"`.
+
+
+<Callout type="error" emoji="️📌">
+To ensure proper functionality when using **RapidLoad's Critical CSS** with any 
+**caching solution**, make sure **Mobile Cache** is enabled as well.
+</Callout>
+
+## How to regenerate Critical CSS
+
+To regenerate Critical CSS, click the settings button located next to the 
+Critical CSS option.
+(img)
+
+After clicking, a popup will appear where you can find the regenerate button at 
+the bottom.
+(img)
+
+Press this button to regenerate the Critical CSS.
+
+## Why regenerate Critical CSS
+
+RapidLoad will automatically regenerate Critical CSS when there are content 
+changes in the currently generated files.
+
+### The reasons to manually regenerate would be
+
+  
+
+* **Failed status:** A blinking red dot with the text "_Failed_" indicates that
+ Critical CSS generation has failed; hover over the dot to see the reason, 
+ resolve the issue, and regenerate the Critical CSS.
+ (img)
+
+* Waiting in queue status: RapidLoad generates Critical CSS on a first-in,
+first-out basis; refer to the "Managing the Job Table" documentation for details.
+If the URL you’re viewing is in the optimization queue, this message will appear;
+to prioritize it, you can regenerate the URL.
+(img)
+
+If enabling RapidLoad Critical CSS causes layout breaks on your site, refer to 
+the documentation for guidance on resolving the issue.
+
+To understand how the Critical CSS generation and Unused CSS generation job 
+tables work, please refer to the documentation.

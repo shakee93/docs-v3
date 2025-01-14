@@ -1,0 +1,79 @@
+---
+title: Defer JS
+--- 
+
+## **What is Defer JavaScript?**
+
+Defer JavaScript improves your website's performance by **delaying the execution of non-essential JavaScript** until after the main content has loaded. This ensures that critical resources are prioritized, leading to faster page loading times and a smoother user experience.
+
+  
+
+## **Benefits of Defer JavaScript:**
+
+*   Faster page rendering by prioritizing critical content.
+*   Reduced initial page load times.
+*   Enhanced Core Web Vitals metrics like First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
+*   Improved PageSpeed Insights scores by addressing render-blocking JavaScript issues.
+
+  
+
+## **How to Enable Defer JavaScript in RapidLoad**
+
+add screenshot
+
+*   Go to the **Optimize** tab in the RapidLoad plugin.
+*   Click on the **Customize Settings** dropdown.
+*   Under the **JavaScript** section, find and enable the **Defer JavaScript** option by checking the box.
+*   Click **Save Changes** to apply the settings.
+
+  
+
+## **Here's how RapidLoad Defer JavaScript works:**
+
+*   RapidLoad scans your website's structure (DOM) to find all JavaScript files linked to your pages.
+*   Once identified, RapidLoad marks non-essential JavaScript files to be deferred, ensuring they load only after the main content is displayed.
+*   Inline JavaScript within `<script>` tags is analyzed to ensure essential scripts are not deferred while optimizing performance.
+*   The process is automated, requiring minimal user intervention while ensuring optimal results.
+*   RapidLoad manages deferred files efficiently to maintain a balance between performance and functionality.
+
+  
+
+## **How to Check if RapidLoad Defer JavaScript is Working**
+
+To confirm that JavaScript files are being deferred by RapidLoad, follow these steps:
+
+1. **Inspect Script Tags in Browser Developer Tools**:
+    *   Open your browser's **Developer Tools** (usually accessible via F12 or 
+    right-click > "Inspect").
+    *   Navigate to the **Elements** tab.
+2. **Look for the** **`<script>`** **Tags with the** **`defer`** **Attribute**:
+    *   Locate the JavaScript `<script>` tags.
+    *   Check if the `defer` attribute is present, which ensures the script is
+    being deferred, improving page performance by loading non-essential JavaScript only after the main content.
+3. **Identify RapidLoad's Optimizations**:
+    *   Look for a custom attribute like `data-rp-defer`.
+    *   This indicates that the script deferring was applied by RapidLoad.
+
+**Example of a Deferred Script Tag:**
+
+```xml
+<script src="example.js" data-rp-defer defer></script>
+```
+
+add screenshot
+
+  
+
+## **Clearing Deferred Files**
+
+You can clear deferred JavaScript settings by clicking the 
+Clear CSS/JS/Font Optimizations button from the RapidLoad admin button on the 
+WordPress dashboard bar.
+
+  
+
+## **Resolving Defer JS Conflicts**
+
+Based on your site's configuration, you may need to exclude certain files from 
+being deferred. 
+[You can exclude these files from the Defer JS process](http://#).

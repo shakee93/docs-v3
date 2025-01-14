@@ -1,0 +1,34 @@
+---
+title: Minify CSS
+---
+
+## What is Minify CSS?
+
+Minify CSS optimizes code by removing whitespace, comments, and formatting, 
+reducing file size for faster loading. It improves website speed, enhances 
+user experience, and boosts SEO without altering the functionality.  
+
+## Here's how RapidLoad Minify CSS works
+
+*   RapidLoad searches your website's Document Object Model (DOM) for files with
+ the `.css`  extension.
+*   Once identified, RapidLoad proceeds to minify these CSS files for optimized 
+performance.
+*   The inline CSS files in the `<style>` tags are minified and served in 
+real-time.
+*   RapidLoad stores minified files at 
+`wp-content/cache/rapidload/min-css//{file-name}-{file-content-hash}.min.css.`
+*   RapidLoad does not save the minified inline CSS as a file.
+*   You can clear the minified CSS files by clicking the 
+Clear CSS/JS/Font Optimizations button once you hover the RapidLoad admin button on the WordPress dashboard bar.
+*   The original CSS files will not be deleted but they will be replaced 
+with minified css files renamed with the `Href` and version(`?ver=xxx`) details.
+    *   Original file: [https://demo.rapidload.io/wp-includes/blocks/navigation/style.css?ver=6.3.2](https://demo.rapidload.io/wp-includes/blocks/navigation/style.css?ver=6.3.2)
+    *   Minified file: [https://demo.rapidload.io/wp-content/cache/rapidload/min-css/style-9a7d09a200c6.min.css](https://demo.rapidload.io/wp-content/cache/rapidload/min-css/style-9a7d09a200c6.min.css)
+*   RapidLoad will re-minify and serve if original files undergo version changes.
+
+## Exclusions
+
+*   Third-party CSS files "_CSS hosted on a different domain_" are excluded from 
+optimization.
+*   Files already marked with the `.min.css` extension are automatically skipped.

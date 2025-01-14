@@ -1,0 +1,136 @@
+---
+title: Unused CSS
+--- 
+
+import { Callout } from 'nextra/components'
+ 
+<Callout emoji="📒">
+  The Unused CSS and Critical CSS optimization options cannot be enabled simultaneously. Enabling Critical CSS alone addresses the 
+  "Reduce Unused CSS" and "Eliminate render-blocking resources" audits. If both are enabled, Critical CSS takes priority.
+</Callout>
+
+## What is Unused CSS?
+
+Unused CSS refers to the portions of stylesheets (not entire files) loaded by the browser but not applied to any elements on the 
+page during its initial or complete rendering. This can include:
+
+*   Styles for elements not present on the current page.
+*   Framework or library styles not utilized in the design.
+*   Legacy styles for features no longer in use.
+
+  
+
+**Benefits of removing unused CSS include:**
+
+*   Faster page loading times by eliminating unnecessary CSS.
+*   Optimized bandwidth usage for better efficiency.
+*   Improved performance by focusing on essential styles.
+
+With RapidLoad, removing unused CSS is straightforward and significantly improves your website's speed and efficiency.
+
+  
+
+## Boost Your PageSpeed Insights Score:
+
+Removing Unused CSS in RapidLoad directly improves your website’s performance by addressing key PageSpeed Insights recommendations:
+
+* **Reduce Unused CSS**
+
+This feature enhances metrics like **First Contentful Paint (FCP)** and **Largest Contentful Paint (LCP)**, improving Core Web Vitals and delivering a faster, more user-friendly website experience.
+
+## Here's how Unused CSS removal works:
+
+1. RapidLoad examines your page’s structure (the DOM) to locate all the CSS files associated with that page.
+2. It analyzes the CSS files to determine which styles are applied to the visible elements and which ones aren’t needed for the current view.
+3. A new, optimized stylesheet is generated, containing only the styles necessary for that page. Unused styles are excluded to improve loading performance.
+4. The optimized stylesheet is served to users when they visit the page, ensuring faster loads without affecting functionality or design.
+
+<div style={{ textAlign: 'center' }}>
+    The whole process runs **automatically**, making it hassle-free for you!
+</div>
+
+<Callout type="error" emoji="️📌">
+**Important Note:**
+
+*   **RapidLoad Files**: The optimized CSS files created by RapidLoad are 
+temporary and will not overwrite your original CSS files.
+*   **Original Files Are Safe**: Your CSS files remain intact, preserving your 
+ability to update or revert changes as needed.
+</Callout>
+
+## How to check if RapidLoad Unused CSS is generated
+(img)
+
+1. Go to the **Optimize** tab in the RapidLoad plugin
+2. Click on the **Customize Settings** dropdown
+3. Under the CSS section, find and enable the Remove Unused CSS option by checking the box.
+4. Click **Save Changes** to apply the settings
+
+<Callout type="error" emoji="️📌">
+*   Why did Unused CSS generation fail?
+    * Unused CSS generation can fail due to authentication issues, firewall 
+    restrictions, Cloudflare bots, or other factors. Follow this _link_ for 
+    details and solutions.
+*   Why was the Unused Generation waiting for a long time?
+    * This may happen if CRON is not functioning properly. Follow this 
+    _link_ for more details.
+</Callout>
+
+## How to check if RapidLoad Unused CSS is generated
+
+1. **In the optimizer**: You will see a green bullet point and the text 
+"Optimized," indicating the RapidLoad unused CSS file is generated and served on 
+your site  
+(img)
+
+2. To verify if unused CSS is removed on a **specific page**:  
+(img)
+
+* **View the page as a logged-out user**: Make sure you're not logged into the WordPress backend when accessing the page. 
+If you prefer not to log out, you can open the page in Incognito mode instead.
+
+* **Open Inspect**: Right-click on the page and select "_Inspect_" 
+(or press `Ctrl + Shift + I` on Windows, `Cmd + Option + I` on Mac).
+
+* Navigate to the Network Tab **Check for RapidLoad Generated files**: In the "_network_" tab, look for the CSS stylesheets starting with `uucss` This 
+confirms that the Unused CSS is successfully generated and served.
+
+## How to regenerate Unused CSS
+To regenerate Unused CSS, click the settings button located next to the Remove 
+Unused CSS option.
+
+(img)
+
+After clicking, a popup will appear where you can find the regenerate button at 
+the bottom.
+(img)
+Press this button to regenerate the unused CSS.
+
+## Why regenerate Unused CSS
+
+RapidLoad will automatically regenerate unused CSS when there are content changes
+in the currently generated files.
+
+  
+
+### The reasons to manually regenerate would be
+
+  
+
+* **Failed status:** A blinking red dot with the text "_Failed_" indicates that
+Unused CSS generation has failed; hover over the dot to see the reason, resolve 
+the issue, and regenerate the Unused CSS.
+(img)
+
+*   **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
+first-out basis; refer to the "Managing the Job Table" documentation for details.
+If the URL you’re viewing is in the optimization queue, this message will appear;
+to prioritize it, you can regenerate the URL.
+
+(img)
+
+If enabling RapidLoad Unused CSS causes layout breaks on your site, refer to the
+documentation for guidance on resolving the issue.
+
+To understand how the Unused CSS generation and Critical CSS generation job 
+tables work, please refer to the documentation.

@@ -1,0 +1,113 @@
+---
+title: Serve Next-Gen Images
+--- 
+
+## What Are Next-Gen Images?
+
+Next-gen image formats, such as **WebP** and **AVIF**, are modern alternatives to traditional formats like JPEG and PNG. They are designed to provide superior compression, resulting in smaller file sizes without compromising image quality. This not only reduces bandwidth usage but also significantly enhances website loading speeds.
+
+## Benefits of Using Next-Gen Images:
+
+1. **Faster Load Times**: Smaller file sizes lead to quicker loading, even on slower networks.
+2. **Improved SEO**: Faster page speeds contribute to better rankings in search engines.
+3. **Enhanced User Experience**: Visitors experience smooth and responsive page loads.
+4. **Bandwidth Savings**: Reduced file sizes help save on hosting and delivery costs.
+
+  
+
+With RapidLoad, converting and serving next-gen images is seamless and automated.
+
+  
+
+## Boost Your PageSpeed Insights Score:
+
+Google’s PageSpeed Insights often recommends serving images in modern formats to address the "_Serve Images in Next-Gen Formats_" suggestion. With RapidLoad’s next-gen image feature, you can resolve this recommendation and improve Core Web Vitals like **Largest Contentful Paint (LCP)**.
+
+  
+
+**Example 1: Image Size Reduction**
+
+*   **Before**: A JPEG image with a size of 500 KB.
+*   **After**: The same image is converted to WebP format, reducing the size to 150 KB.
+*   **Impact**: This reduction leads to faster loading times and decreased bandwidth usage.
+
+  
+
+## How to Enable Next-Gen Images in RapidLoad:
+
+*   Go to the **Optimize** tab in the RapidLoad plugin.
+*   Click on the **Customize Settings** dropdown.
+*   Under the **Image** section, find and enable the **Serve next-gen Images** option by checking the box.
+*   Click **Save Changes** to apply the settings.
+
+  
+
+## How RapidLoad Serves Next-Gen Images:
+
+1. **Automatic Conversion**: RapidLoad converts images to next-gen formats (WebP and AVIF) without altering your original files.
+2. **Device Compatibility Check**: RapidLoad detects browser compatibility and serves next-gen images only to supported devices, ensuring a seamless experience for all users.
+3. **Optimized Delivery**: Images are optimized and served via RapidLoad’s CDN for maximum speed and efficiency.
+4. **Fallback Mechanism**: For browsers that don’t support next-gen formats, the original image is served as a fallback.
+
+  
+
+## How to Check If Next-Gen Images Are Being Served:
+
+1. **Inspect the Page**:
+    *   Right-click on the page and select _Inspect_ (or press **Ctrl + Shift + I** on Windows, **Cmd + Option + I** on Mac).
+2. **Review Image Format**:
+    *   In the _Network_ tab, filter by “_Img_” and look at the file formats being loaded. You should see WebP or AVIF for compatible browsers.
+3. **Verify in PageSpeed Insights**:
+    *   Run your website through **Google PageSpeed Insights**. The recommendation to "Serve Images in Next-Gen Formats" should no longer appear if the feature is working correctly.
+
+  
+
+## Settings for Next-Gen Images in RapidLoad:
+
+  
+
+**1\. Image Optimization Levels:**
+
+Choose from three optimization levels to balance quality and file size:
+
+*   **Lossy**: Maximum compression with some quality loss.
+*   **Glossy**: Balanced compression with minimal quality impact.
+*   **Lossless**: No quality loss with less compression.
+
+  
+
+**2\. Low-Quality Image Placeholder (LQIP):**
+
+Enable this option to generate low-quality, blurry SVG placeholders for images. These placeholders are displayed while the high-quality image loads, improving perceived loading speeds.
+
+  
+
+**3\. Enable Adaptive Image Delivery:**
+
+Resize your images dynamically based on the device’s screen size to reduce download times and improve performance on mobile and tablet devices.
+
+  
+
+**4\. Exclude Images from Modern Image URLs:**
+
+Specify URLs or image paths to exclude certain images from being converted to next-gen formats. This is useful for logos or images that require specific formats.
+
+  
+
+## Common Issues and Solutions:
+
+**1\. Images Are Not Being Converted:**
+
+*   **Check Plugin Settings**: Ensure that the Next-Gen Images feature is enabled.
+*   **Verify CDN Setup**: Confirm that RapidLoad’s CDN is properly configured and active.
+
+  
+
+**2\. Original Images Are Being Served:**
+
+*   **Browser Compatibility**: Make sure your browser supports WebP or AVIF.
+*   **Cache Issue**: Clear your site’s cache and try again.
+
+  
+
+By enabling and utilizing the Serve Next-Gen Images feature in RapidLoad, you’re taking an essential step towards optimizing your website’s performance and delivering a faster, more engaging user experience.

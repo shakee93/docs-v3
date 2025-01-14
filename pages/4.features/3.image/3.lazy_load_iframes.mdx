@@ -1,0 +1,120 @@
+---
+title: Lazy Load Iframes
+---   
+
+## What is Lazy Loading for Iframes?
+
+Lazy loading for iframes is a technique that delays loading iframe content such as videos, embedded maps, or third-party widgets until the user scrolls to the iframe’s position on the page. This reduces the initial page load time and improves overall performance.
+
+## Benefits of Lazy Loading Iframes:
+
+*   **Faster Page Load Times**: Non-critical iframe content (like YouTube videos or Google Maps) loads only when necessary.
+*   **Reduced Resource Usage**: Minimizes bandwidth usage by avoiding the immediate loading of offscreen iframes.
+*   **Improved Core Web Vitals**: Enhances key metrics like **Largest Contentful Paint (LCP)** and **Time to Interactive (TTI)**.
+*   **Better User Experience**: Speeds up page rendering, especially for visitors on slower networks or mobile devices.
+
+With RapidLoad, enabling LazyLoad for iframes is simple and provides an instant performance boost.
+
+## How to Enable LazyLoad Iframes in RapidLoad
+
+1. Go to the **Optimize** tab in the RapidLoad plugin.
+2. Click on the **Customize Settings** dropdown.
+3. Under the **Iframes** section, find and enable the **LazyLoad Iframes** option by checking the box.
+4. Click **Save Changes** to apply the settings.
+
+## How to Verify LazyLoad Iframes is Working
+
+To check if LazyLoad for iframes is working:
+
+1. **Inspect the Page**:
+    *   Right-click on your webpage and select **Inspect** (or press **Ctrl + Shift + I** on Windows, **Cmd + Option + I** on Mac).
+    *   Go to the **Network** tab.
+2. **Scroll Down**:
+    *   Observe the iframe requests. Iframes located below the fold will only load as you scroll to them.
+3. **Check for Lazy Attribute**:
+    *   `data-rapidload-lazy-src`: Contains the original iframe source URL, ensuring it's loaded only when needed.
+    *   `data-rapidload-lazy-method="viewport"`: Specifies that the iframe will load upon entering the viewport.
+    *   `data-rapidload-lazy-attributes="src"`: Indicates which attribute (`src`) will be updated during lazy loading.
+    *   `loading="lazy"`: Standard browser attribute for lazy loading support.
+    *   `<noscript>`: Provides a fallback iframe for users with delay JavaScript.
+
+### Example of Modified iframe with `<noscript>` Fallback
+
+**Original iframe:**
+
+```plain
+<iframe src="https://example.com/embed/video" width="560" height="315"></iframe>
+```
+
+  
+
+**Modified by LazyLoad:**
+
+```plain
+<iframe 
+    data-rapidload-lazy-src="https://example.com/embed/video" 
+    data-rapidload-lazy-method="viewport" 
+    data-rapidload-lazy-attributes="src" 
+    loading="lazy" 
+    width="560" 
+    height="315">
+</iframe>
+<noscript>
+    <iframe src="https://example.com/embed/video" width="560" height="315"></iframe>
+</noscript>
+
+
+```
+
+## Why is LazyLoad for Iframes Not Working?
+
+If LazyLoad for iframes is not functioning as expected, check for the following:
+
+1. **JavaScript Conflicts**:
+    *   Other scripts or plugins may interfere with RapidLoad’s LazyLoad feature. Disable conflicting plugins temporarily for testing.
+2. **Caching Issues**:
+    *   Clear all caches (site cache, browser cache, and CDN cache) and reload the page.
+3. **Excluded URLs**:
+    *   Ensure the iframe URLs are not mistakenly added to any exclusion list.
+4. **Unsupported Iframe Sources**:
+    *   Some iframe sources may not support lazy loading. Check the source and test compatibility.
+
+## How to Exclude Specific Iframes from LazyLoad
+
+1. Go to the **Customize Settings** dropdown under the **Iframes** section.
+2. Find the **Exclude Iframes** option.
+3. Add the iframe URLs you want to exclude. Example:
+
+```plain
+https://example.com/embed/video  
+https://maps.google.com/*
+```
+
+1. Click **Save Changes**.
+
+## How LazyLoad Iframes Improves Performance
+
+LazyLoad for iframes in RapidLoad enhances your website’s performance by:
+
+*   Reducing the **initial page load size**.
+*   Prioritizing critical content before non-visible iframe content.
+*   Delaying third-party iframe requests (like YouTube or Google Maps), which are often resource-heavy.
+
+## How to Test LazyLoad Iframes Performance
+
+1. Use performance tools like **Google PageSpeed Insights** or **GTmetrix**.
+2. Focus on improvements in the following metrics:
+    *   **Largest Contentful Paint (LCP)**
+    *   **Time to Interactive (TTI)**
+    *   **Total Blocking Time (TBT)**
+3. Observe a reduction in the number of resources loaded during the initial page render.
+
+## Why Use LazyLoad Iframes with RapidLoad?
+
+*   **Effortless Integration**: RapidLoad applies LazyLoad to iframes automatically without requiring custom coding.
+*   **Improved Performance**: Significantly reduces page load times and improves user experience.
+*   **Customizable Exclusions**: Easily exclude critical iframes that must load immediately.
+
+  
+
+By enabling LazyLoad for iframes, you ensure a faster, more efficient website without compromising functionality.

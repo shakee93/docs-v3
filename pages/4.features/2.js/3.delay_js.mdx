@@ -1,0 +1,122 @@
+--- 
+title: Delay JS
+---
+
+import { Callout } from 'nextra/components'
+
+## What is Delaying JavaScript?
+
+Delaying the loading of JavaScript until the user interacts with the website (e.g., click, scroll) is a technique used to improve website performance. Loading all JavaScript files at once can slow down the initial loading of a webpage. By deferring the loading of non-critical JavaScript files until after the initial page load, your website can load faster and provide a better user experience.
+
+## Boost Your PageSpeed Insights Score
+
+The Delay JavaScript feature in RapidLoad addresses two key PageSpeed Insights recommendations:
+
+* Eliminate Render-Blocking Resources
+* Reduce Unused JavaScript
+* Minimize Main thread work
+* Reduce JavaScript Execution time
+* Total blocking time
+* First contentful paint
+
+By enabling this feature, your website’s Core Web Vitals metrics improve, delivering a more user-friendly experience and higher performance scores.
+
+## How to Enable JavaScript Delay in RapidLoad
+
+1. Navigate to the Optimize tab in the RapidLoad plugin.
+
+2. Click on the Customize Settings dropdown.
+
+3. Locate the JavaScript section.
+
+4. Check the box to enable the Delay JavaScript option.
+
+5. Click Save Changes to apply the settings.
+
+## How RapidLoad Handles Delayed JavaScript
+
+RapidLoad optimizes the performance of your site by delay. It offers two types of delay methods to suit different use cases:
+
+switch methods
+
+(img)
+
+### **All Files Delay (Default)**
+
+This method delays all inline and external JavaScript files on your site.
+
+* **Inline Scripts**
+        
+        All inline scripts are processed to ensure only critical scripts are loaded immediately. These include:
+        
+        *   **Variable declarations:** Critical variables (e.g., `window.dataLayer = ...`) are loaded immediately.
+        *   **Function declarations:** Essential functions (e.g., `function gtag() { ... }`) are loaded immediately.
+        
+        Other inline function calls are delayed until user interaction occurs, improving page load times.
+        
+        **Example**: Inline Script Transformation
+        
+        **Original Inline Script:**
+        
+        ```xml
+        <script type="text/javascript">
+              window.dataLayer = window.dataLayer || []; // Variable declaration (excluded).
+              function gtag() { dataLayer.push(arguments); } // Function declaration (excluded).
+              gtag('js', new Date()); // Function call (delayed).
+              gtag('config', 'G-4ZTDF2L9YB'); // Function call (delayed).
+        </script>
+        ```
+        
+        **Transformed by RapidLoad:**
+        
+        ```xml
+        <script type="text/javascript">
+              window.dataLayer = window.dataLayer || []; // Not delayed.
+              function gtag() { dataLayer.push(arguments); } // Not delayed.
+              // Function calls wrapped in event listener for delayed execution.
+              document.addEventListener('RapidLoad:DelayedScriptsLoaded', function() {
+                gtag('js', new Date());
+              });
+              document.addEventListener('RapidLoad:DelayedScriptsLoaded', function() {
+                gtag('config', 'G-4ZTDF2L9YB');
+              });
+        </script>
+        ```
+        
+* **External Scripts**
+        
+        All external JavaScript files are delayed. RapidLoad removes the `src` attribute from `<script>` tags and replaces it with a `data-rapidload-src` attribute. The script is only loaded when the user interacts with the page (e.g., clicking or scrolling).
+        
+        **Example**: External Script Transformation
+        
+        **Original Script (before delay):**
+        
+        ```xml
+        <script src="https://example.com/js/script.js"></script>
+        ```
+        
+        **Transformed by RapidLoad (delayed):**
+        
+        ```xml
+        <script data-rapidload-src="https://example.com/js/script.js"></script>
+        ```
+        
+        **When User Interaction Occurs:**
+        
+        ```xml
+        <script src="https://example.com/js/script.js"></script>
+        ```
+
+### **Selected Files Delay**
+
+a. **Delaying Specific Files**: To delay specific files, you only need to input part of the file name. For example, if you want to delay the file `slider.js`, simply enter the string `slider`.
+
+b. **Delaying Inlined Scripts**: To delay an inline script, provide a uniquely identifiable string related to the script, such as an ID, variable name, or similar identifier. For example, you can use strings like `gtag` or `gtm`.
+
+c. If a folder contains multiple JavaScript files that need to be delayed, you can simply provide the folder path. RapidLoad will automatically delay all the JavaScript files within that path, saving you time and effort.
+
+<Callout type="error" emoji="️📌">
+When specifying a string to delay files, ensure it is unique to the intended scripts. If the string (e.g., `example1`) is used in 
+another script or file, both scripts will be delayed. To avoid this, use precise strings that uniquely identify the target scripts 
+or paths.
+</Callout>

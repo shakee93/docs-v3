@@ -1,0 +1,7 @@
+html .nextra-callout {
+  color: black !important;
+}
+
+html[data-theme='dark'] .nextra-callout {
+  color: white !important;
+}
