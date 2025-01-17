@@ -1,3 +1,70 @@
 ---
 title: Preload Fonts
 --- 
+
+import { Callout } from 'nextra/components'
+
+
+### **How to Use Preload Fonts**
+
+The **Preload Fonts** option is a performance enhancement technique that instructs the browser to prioritize downloading specific font files earlier in the loading process. Typically, fonts referenced inside CSS files are only discovered by the browser after the CSS is loaded. Preloading solves this delay, resulting in faster text rendering and improved perceived performance.
+
+  
+
+### **How to Choose Fonts to Preload**
+
+Preloading fonts can significantly enhance page performance by ensuring essential fonts are ready when the page loads. Here's how to decide which fonts to preload:
+
+#### **Identify Fonts to Preload**
+
+Google PageSpeed Insights highlights fonts that could benefit from preloading under the **"Preload Key Requests"** opportunity:
+
+1. Right-click on the recommended font in PageSpeed and copy the URL.
+2. Paste the URL into the "Fonts to Preload" field in your settings.
+
+<Callout type="error" emoji="️📌">
+**Important:**
+*   The font must be hosted on your domain or your CDN.
+*   Externally hosted fonts (like Google Fonts) are optimized automatically when using RapidLoad's **Optimize Google Fonts** feature.
+</Callout>
+
+### **Use Preload Only When Necessary**
+
+Preloading fonts can significantly improve page load times, but overusing it may slow down performance. Here are some key guidelines to follow:
+
+*   **Preload Only Essential Fonts**: Focus on preloading fonts that are crucial for displaying the visible content of your page when it first loads (above-the-fold content).
+    *   **For example:** if your website's body text uses "Roboto," and it's part of the content shown immediately when the page loads, preloading "Roboto" is a good choice.
+*   **Avoid Preloading Decorative Fonts**: Skip fonts that are used for decorative purposes or content that doesn’t appear immediately on the page.
+    *   **For example:** if you are using a fancy font like "Lobster" for headings that appear further down the page, preloading this font is unnecessary. You can wait for the page to load fully and then load this font without affecting the user experience.
+*   **Don’t Preload Multiple Font Formats**: Modern browsers usually prioritize the `.woff2` format. Preloading different formats like `.woff`, `.ttf`, `.eot`, or `.svg` for the same font is redundant and wastes resources.
+    *   **For example:** if you need to preload "Roboto" in `.woff2` format, don’t also preload the `.woff` or `.ttf` formats.
+
+By using preload for only critical fonts, you can improve page load times without negatively impacting your site's performance.
+
+  
+
+### **How Preloading Fonts Works**
+
+When you enter a font URL for preloading, RapidLoad automatically adds a preload tag to your site's HTML. This tag is placed just after the closing `</title>` tag, ensuring the font is prioritized for loading.
+
+Example of the Preload Tag:
+
+```xml
+<link rel="preload" as="font" href="https://example.com/wp-content/themes/yourtheme/fonts/yourfont.woff2" crossorigin>
+```
+
+following attributes will be added:
+
+*   **`href`****:** Specifies the path to the font file.
+*   **`as="font"`****:** Defines the resource type as a font file, helping the browser handle it appropriately.
+*   **`crossorigin="anonymous"`****:** Required for cross-origin font loading, allowing the font to be used on your site without security issues.
+
+  
+
+### **Benefits**
+
+*   **Faster Font Rendering**: Fonts load quickly, allowing text to appear instantly.
+*   **Prevents Layout Shifts**: Avoids issues like invisible text (FOIT) or unstyled text (FOUT).
+*   **Improves Perceived Speed**: Makes your website feel faster to users.
+*   **Better Core Web Vitals (LCP)**: Helps improve the Largest Contentful Paint (LCP) score.
+*   **Reduces Latency**: Cuts down on delays by loading fonts early.

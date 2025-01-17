@@ -2,3 +2,66 @@
 title: Exclude Above the Fold Images
 --- 
 
+import { Callout } from 'nextra/components'
+
+Lazy loading is a great way to make your website faster by loading images only when they’re needed. But for **above-the-fold images** the ones your visitors see right away it’s better to load them instantly.
+
+## Why Should You Exclude Above-The-Fold Images?
+
+When above-the-fold images (like banners or hero images) are lazy-loaded, they can take a moment to appear, leading to:
+
+*   A slower **Largest Contentful Paint (LCP)** score.
+*   A less-than-ideal first impression for your visitors.
+
+By excluding these images, they’ll load immediately, improving your page speed and user experience.
+
+## How to Use This Feature
+
+1. Go to the **Optimize** tab in the RapidLoad plugin.
+2. Expand the **Customize Settings** dropdown.
+3. Under the **Images** section, check the box for **Exclude Above-The-Fold Images From Lazy Loading**.
+4. Click the **Settings** icon next to the exclusion option:
+    *   A popup will appear where you can select the number of above-the-fold images to exclude from lazy loading.
+    *   Choose a value (e.g., 1, 2, 3, etc.) depending on how many above-the-fold images you want to exclude.
+5. Click **Save Changes** to apply.
+
+## How to Check if It's Working
+
+Follow these steps to confirm the above-the-fold images are excluded from lazy loading:
+
+1. **Open Developer Tools:**
+    *   In Chrome, go to **View > Developer > Developer Tools**, or press **Ctrl + Shift + I** (Windows) or **Cmd + Option + I** (Mac).
+2. **Inspect the Image:**
+    *   Navigate to an above-the-fold image on your website (e.g., your logo or hero image).
+    *   Right-click the image and select **Inspect** to open its `<img>` tag in the Elements tab.
+3. **Look for Attribute Changes:**
+    *   Confirm that the image no longer has the `loading="lazy"` attribute. This means the lazy loading functionality is disabled for this image.
+    *   Check for the `fetchpriority="high"` attribute. This ensures the image is prioritized for faster loading.
+
+```plain
+<img src="hero-image.jpg" fetchpriority="high" alt="Hero Image">
+```
+
+If these attributes are correctly modified, the setting is working as expected.
+
+## What is Fetch Priority?
+
+The **fetchpriority** attribute is a browser feature that helps you prioritize the loading of critical resources, such as images or scripts. By setting this attribute to `high`, you signal to the browser that the resource should be loaded as a top priority.
+
+This attribute is particularly useful for **above-the-fold images**, like logos or hero banners, as it ensures they load quickly, enhancing the **Largest Contentful Paint (LCP)** score a critical metric for user experience and search engine optimization (SEO).
+
+Unlike preloading, which forces the browser to load a resource immediately, the fetchpriority attribute takes a more balanced approach. It lets the browser make informed decisions while still prioritizing the most important resources.
+
+#### How Fetch Priority Works
+
+*   **High Priority:** Use `fetchpriority="high"` for critical elements, such as the hero image or LCP image.
+*   **Low Priority:** Use `fetchpriority="low"` for non-critical elements that don’t affect the initial page load.
+
+## Difference between Fetch Priority and Preload
+
+*   **Fetch Priority:** Ideal for dynamically prioritizing LCP images or other key resources. It balances performance by letting the browser decide load order for resources of equal priority.
+*   **Preload:** More aggressive and better suited for CSS background images or critical fonts.
+
+<Callout type="error" emoji="️📌">
+**Note:** Do not use `fetchpriority` and `preload` together on the same resource. Preload takes precedence and is more aggressive.
+</Callout>
