@@ -7,6 +7,7 @@ export default {
     theme: {
       layout: 'raw',
       sidebar: false,
+      footer: false,
     },
     type: 'page',
     "display": "hidden"
