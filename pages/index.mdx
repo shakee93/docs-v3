@@ -1,33 +1,278 @@
 ---
-title: Home
---- 
+title: Getting started with RapidLoad Documentation
+description: Learn how to fix PageSpeed issues and improve your PageSpeed Score
+layout: ../layouts/CustomLayout.tsx
+---
 
-import { Cards } from 'nextra/components'
+import { Cards } from 'nextra/components';
+import { Search } from 'nextra/components';
+import "cal-sans";
 
- 
-<Cards>
+<style jsx global>{`
+  
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+  
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero-section {
+    background-image: url('/images/homepage/herobg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  .hero-description-2 {
+    color: #fff;
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .nextra-cards .nextra-card {
+    width: 350px !important;
+    height: 380px !important;
+    padding: 16px !important;
+    border: none !important;
+    border-radius: 28px !important;
+    padding-right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: left !important;
+  }
+
+  .nextra-card .button-pill {
+    font-family: 'Manrope' !important;
+    margin-top: 20px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    border: 0.5px solid #00000033 !important;
+  }
+
+  .card-description {
+    font-size: 16px !important;
+    color: #000 !important;
+    margin-top: 12px !important;
+    font-family: 'Manrope' !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+  }
+
+  .card-title {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    color: black !important;
+    font-family: 'Cal Sans' !important;
+  }
+
+  .card-img{
+    width: 65px !important;
+    height: 65px !important;
+    margin-right: 8px !important;
+  }
+
+  .nextra-cards .nextra-card[href="/1.getting_started"] {
+    background-color: #FDFCDC !important;
+  }
+
+  .nextra-cards .nextra-card[href="/2.manage_accounts"] {
+    background-color: #FED9B7 !important;
+  }
+  .nextra-cards .nextra-card[href="/3.overviews"] {
+    background-color: #D8F3DC !important;
+  }
+  .nextra-cards .nextra-card[href="/4.features"] {
+    background-color: #F7E1D7 !important;
+  }
+  .nextra-cards .nextra-card[href="/faq"] {
+    background-color: #F7D6E0 !important;
+  }
+  .nextra-cards .nextra-card[href="/general_settings"] {
+    background-color: #DDDDFF !important;
+  }
+  
+  .custom-search,
+  .nextra-search {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .nextra-cards .nextra-card {
+      flex: 0 0 90%; // 1 card per row on small screens
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .nextra-cards .nextra-card {
+      flex: 0 0 48%; // 2 cards per row on medium screens
+    }
+  }
+  
+  @media (min-width: 901px) {
+    .nextra-cards .nextra-card {
+      flex: 0 0 30%; // 3 cards per row on large screens
+    }
+  }
+
+`}</style>
+
+<div className="hero-section" style={{ width: '100%', margin: '0', padding: '0', position: 'relative' }}>
+  <div style={{ 
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    zIndex: 1,
+    width: '100%'
+  }}>
+    <div style={{ textAlign: 'center' }}>
+      <h1 style={{ 
+        fontSize: '40px',
+        fontWeight: 'bold',
+        marginBottom: '1rem',
+        color: 'white',
+        fontFamily: 'Cal Sans'
+      }}>Getting started with RapidLoad Documentation</h1>
+      <p className="hero-description-2">Learn how to fix PageSpeed issues and improve your PageSpeed Score</p>
+    </div>
+  </div>
+</div>
+
+<Cards style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '50px', marginTop: '34px', gap: '30px' }}>
+  
+  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '30px', flexWrap: 'wrap' }}>
+  
   <Cards.Card
-    title="Getting Started"
+    title={
+      <div>
+         <img src="/images/homepage/get-start-icon.png" alt="Getting Started Icon" className="card-img" />
+         <div className="card-title">
+          Getting Started
+        </div>
+        <div className="card-description">
+          How to choose a subscription plan,<br />
+          set up your account and <br />
+          connect your site
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
     href="/1.getting_started"
   />
 
   <Cards.Card
-    title="Manage Account"
+    title={
+      <div>
+         <img src="/images/homepage/manage-account.png" alt="Manage Account Icon" className="card-img" />
+         <div className="card-title">
+          Manage Account
+        </div>
+        <div className="card-description">
+          Manage your account settings<br />
+          and preferences
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
     href="/2.manage_accounts"
   />
 
   <Cards.Card
-    title="Overviews"
+    title={
+      <div>
+         <img src="/images/homepage/overview.png" alt="Manage Account Icon" className="card-img" />
+         <div className="card-title">
+          Overviews
+        </div>
+        <div className="card-description">
+          Get a comprehensive overview of <br />
+          all RapidLoad features and capabilities
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
     href="/3.overviews"
   />
+  </div>
 
+  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '30px', flexWrap: 'wrap' }}>
+  
   <Cards.Card
-    title="General Settings"
+    title={
+       <div>
+         <img src="/images/homepage/gen-settings.png" alt="Manage Account Icon" className="card-img" />
+         <div className="card-title">
+          General Settings
+        </div>
+        <div className="card-description">
+         Configure your global settings <br />
+         and preferences
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
     href="/general_settings"
   />
 
   <Cards.Card
-    title="Features"
+    title={
+       <div>
+         <img src="/images/homepage/features.png" alt="Manage Account Icon" className="card-img" />
+         <div className="card-title">
+          Features
+        </div>
+        <div className="card-description">
+         Explore all the powerful features<br />
+         RapidLoad has to offer
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
     href="/4.features"
   />
+
+  <Cards.Card
+    title={
+       <div>
+         <img src="/images/homepage/faq.png" alt="Manage Account Icon" className="card-img" />
+         <div className="card-title">
+          FAQ
+        </div>
+        <div className="card-description">
+         Find answers to commonly <br />
+         asked questions
+        </div>
+        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
+          Start learning
+        </button>
+      </div>
+    }
+    href="/faq"
+  /></div>
 </Cards>
