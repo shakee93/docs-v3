@@ -1,5 +1,3 @@
-import { Github } from 'nextra/icons';
-import { FaGithub } from 'react-icons/fa';
 
 export default {
   index: {

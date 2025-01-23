@@ -24,5 +24,6 @@ export default {
     </>
   ),
   search: false,
+  darkMode: false,
   // ... other theme options
 }

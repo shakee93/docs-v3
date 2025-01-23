@@ -127,6 +127,15 @@ import "cal-sans";
     .nextra-cards .nextra-card {
       flex: 0 0 90%; // 1 card per row on small screens
     }
+    .footer {
+      flex-direction: column; // Stack items vertically on small screens
+      align-items: center; // Center align items
+      width: 100%; // Full width on small screens
+    }
+    
+    .footer div {
+      margin: 10px 0; // Add margin for spacing
+    }
   }
   
   @media (min-width: 601px) and (max-width: 900px) {
@@ -317,10 +326,10 @@ import "cal-sans";
     <span>Copyright © 2025 RapidLoad</span>
   </div>
   
-  <div>
-    <a href="#" style={{ margin: '0 10px' }}>Terms</a>
-    <a href="#" style={{ margin: '0 10px' }}>Privacy Policy</a>
-    <a href="#" style={{ margin: '0 10px' }}>Security</a>
+  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px' }}>
+    <a href="#" style={{ margin: '5px 0' }}>Terms</a>
+    <a href="#" style={{ margin: '5px 0' }}>Privacy Policy</a>
+    <a href="#" style={{ margin: '5px 0' }}>Security</a>
   </div>
 
 </div>
