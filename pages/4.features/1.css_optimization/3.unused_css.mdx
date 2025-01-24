@@ -9,7 +9,7 @@ import { Callout } from 'nextra/components'
   "Reduce Unused CSS" and "Eliminate render-blocking resources" audits. If both are enabled, Critical CSS takes priority.
 </Callout>
 
-## What is Unused CSS?
+# Unused CSS
 
 Unused CSS refers to the portions of stylesheets (not entire files) loaded by the browser but not applied to any elements on the 
 page during its initial or complete rendering. This can include:
@@ -111,18 +111,14 @@ Press this button to regenerate the unused CSS.
 RapidLoad will automatically regenerate unused CSS when there are content changes
 in the currently generated files.
 
-  
-
 ### The reasons to manually regenerate would be
-
-  
 
 * **Failed status:** A blinking red dot with the text "_Failed_" indicates that
 Unused CSS generation has failed; hover over the dot to see the reason, resolve 
 the issue, and regenerate the Unused CSS.
 (img)
 
-*   **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
+*  **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
 first-out basis; refer to the "Managing the Job Table" documentation for details.
 If the URL you’re viewing is in the optimization queue, this message will appear;
 to prioritize it, you can regenerate the URL.

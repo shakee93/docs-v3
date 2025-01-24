@@ -1,3 +1,97 @@
 ---
 title: Page Cache
 --- 
+
+# Page Cache
+
+Page Cache is a performance optimization technique where the fully rendered HTML of your web pages is stored temporarily. 
+Instead of regenerating the page for every visitor, the cached version is served, significantly reducing server processing time and 
+improving load speed.
+
+## Benefits of Page Caching:
+
+1. **Faster Load Times:** Cached pages load significantly faster as they bypass the need for dynamic rendering.
+2. **Reduced Server Load:** Fewer server resources are consumed as pages are served as static files.
+3. **Improved Scalability:** Handle more traffic efficiently by reducing server bottlenecks.
+4. **Better Core Web Vitals:** Enhances metrics like Time to First Byte (TTFB) and Largest Contentful Paint (LCP), boosting SEO rankings.
+
+With RapidLoad, enabling Page Cache is effortless and can substantially improve your website’s performance and user experience.
+
+## How Page Cache Works in RapidLoad
+
+1. **Capturing Page Content:** RapidLoad captures the dynamic content of your web pages and saves them as static HTML files on the server's disk.
+2. **Cache Versions:** Depending on your plugin settings and HTTP requests, RapidLoad creates and manages several possible cache versions to ensure compatibility and performance.
+3. **Serving Cached Pages:** When a request matches an existing cache, the static HTML file is delivered directly to the visitor without any database queries or on-the-fly compression.
+4. **Optimized Delivery:** By bypassing dynamic rendering, cached pages are served faster, providing a quicker and smoother user experience.
+
+## How to Enable Page Cache in RapidLoad
+
+*   Go to the **Optimize** tab in the RapidLoad plugin.
+*   Click on the **Customize Settings** dropdown.
+*   Under the **Cache** section, find and enable the **cache** option by checking the box.
+*   Click **Save Changes** to apply the settings.
+
+## How to Verify Page Cache is Working
+
+1. **Test with Developer Tools:**
+
+1. Open your website in a browser.
+2. Right-click and select Inspect (or press Ctrl + Shift + I on Windows, Cmd + Option + I on Mac).
+3. Go to the Network tab.
+4. Reload the page and observe the responses.
+    *   Look for headers like `X-Cache: HIT`, which indicate cached content is being served.
+
+2. **Use Online Testing Tools:**
+
+1. Use tools like Google PageSpeed Insights or Pingdom to check your site's load times.
+2. Analyze improvements in metrics such as TTFB and page speed scores.
+
+## Why is Page Cache Not Working?
+
+If Page Cache doesn’t appear to be working:
+
+1. **Caching Disabled:** Ensure the Page Cache toggle is turned on in the plugin settings.
+2. **Conflicting Plugins:** Disable other caching or optimization plugins temporarily to rule out conflicts.
+3. **Exclusion Rules:** Check if specific URLs or query strings are excluded from caching.
+4. **Cache Clearing Required:** Clear the cache manually to ensure changes are reflected. This can be done from the RapidLoad dashboard.
+
+## How to Clear Page Cache in RapidLoad
+
+1. **Access the Cache Summary:** Go to the Dashboard tab in RapidLoad and locate the Cache Summary section.
+2. **Clear Entire Cache:** Click on the Clear Cache button to remove all cached pages.
+3. **Clear Specific URLs:**
+    *   Navigate to the Optimize tab.
+    *   Use the Clear Specific URLs field to enter the exact URLs you want to clear.
+    *   Click Clear to remove cache for those pages.
+
+## How to Exclude Pages from Caching
+
+1. **Go to Customize Settings:** Open the Customize Settings dropdown in the Optimize tab.
+2. **Add Exclusion Rules:**
+    *   Find the Exclude Pages section.
+    *   Add the URLs or patterns for the pages you want to exclude. Examples:
+        *   `/checkout`
+        *   `/user-profile/*`
+3. **Save Changes:** Click Save Changes to apply the exclusions.
+
+## How to Test Page Cache Performance
+
+Use the following tools to evaluate the impact of Page Cache:
+
+1. **Google PageSpeed Insights:** Check improvements in TTFB and other speed metrics.
+2. **GTmetrix:** Analyze page load times before and after enabling caching.
+3. **WebPageTest:** Conduct detailed performance testing for cached pages.
+
+Look for enhancements in:
+
+*   Time to First Byte (TTFB)
+*   Largest Contentful Paint (LCP)
+*   Total Page Load Time
+
+## Why Use Page Cache with RapidLoad?
+
+1. **Automatic Cache Management:** Handles cache generation and updates without manual intervention.
+2. **Seamless Integration:** Works alongside other RapidLoad optimizations for a comprehensive performance boost.
+3. **User-Friendly:** Easy to enable and customize without requiring technical expertise.
+
+For further assistance or advanced configurations, refer to the RapidLoad documentation or contact support.

@@ -4,7 +4,7 @@ title: Delay JS
 
 import { Callout } from 'nextra/components'
 
-## What is Delaying JavaScript?
+# Delay JavaScript?
 
 Delaying the loading of JavaScript until the user interacts with the website (e.g., click, scroll) is a technique used to improve website performance. Loading all JavaScript files at once can slow down the initial loading of a webpage. By deferring the loading of non-critical JavaScript files until after the initial page load, your website can load faster and provide a better user experience.
 
@@ -41,7 +41,7 @@ switch methods
 
 (img)
 
-### **All Files Delay (Default)**
+### All Files Delay (Default)
 
 This method delays all inline and external JavaScript files on your site.
 
@@ -107,13 +107,16 @@ This method delays all inline and external JavaScript files on your site.
         <script src="https://example.com/js/script.js"></script>
         ```
 
-### **Selected Files Delay**
+### Selected Files Delay
 
-a. **Delaying Specific Files**: To delay specific files, you only need to input part of the file name. For example, if you want to delay the file `slider.js`, simply enter the string `slider`.
+a. **Delaying Specific Files**: To delay specific files, you only need to input part of the file name. For example, 
+if you want to delay the file `slider.js`, simply enter the string `slider`.
 
-b. **Delaying Inlined Scripts**: To delay an inline script, provide a uniquely identifiable string related to the script, such as an ID, variable name, or similar identifier. For example, you can use strings like `gtag` or `gtm`.
+b. **Delaying Inlined Scripts**: To delay an inline script, provide a uniquely identifiable string related to the script, 
+such as an ID, variable name, or similar identifier. For example, you can use strings like `gtag` or `gtm`.
 
-c. If a folder contains multiple JavaScript files that need to be delayed, you can simply provide the folder path. RapidLoad will automatically delay all the JavaScript files within that path, saving you time and effort.
+c. **Delaying using Path**: If a folder contains multiple JavaScript files that need to be delayed, you can simply provide the
+ folder path. RapidLoad will automatically delay all the JavaScript files within that path, saving you time and effort.
 
 <Callout type="error" emoji="️📌">
 When specifying a string to delay files, ensure it is unique to the intended scripts. If the string (e.g., `example1`) is used in 

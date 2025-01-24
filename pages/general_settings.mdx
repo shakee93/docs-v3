@@ -1,3 +1,69 @@
 ---
 title: General Settings
 --- 
+
+# General Settings
+
+This documentation provides an overview of the "General Settings" in the RapidLoad.
+
+## 1.Exclude URLs
+
+This feature allows you to exclude specific URLs from being optimized by RapidLoad. By setting exclusions, you can ensure that certain pages are not affected by the which might be necessary for:
+
+*   Pages with highly custom scripts that may conflict with optimization.
+*   Sections of the website that require different loading strategies.
+
+  
+
+## 2.Minify HTML
+
+Enabling the "**_Minify HTML_**" setting compresses the HTML content by removing unnecessary spaces, line breaks, and comments.
+This helps reduce the page size, leading to faster load times. The benefits include:
+
+*   Improved page load speed.
+*   Enhanced user experience due to reduced page render times.
+*   Lower bandwidth usage.
+
+  
+
+## 3. Preload Links
+
+The "Preload Links" setting is designed to anticipate user navigation by preloading linked resources. This means that when a user
+hovers over or clicks a link, the page begins to load in the background, providing:
+
+
+* Faster navigation between pages.
+* Smoother user experience as linked content is already partially loaded.
+
+## 4.Debug Mode
+
+Debug mode is an essential tool for diagnosing and troubleshooting optimization issues. When enabled, it generates detailed logs of 
+the RapidLoad optimizations performed on your website. These logs provide insights into:
+
+
+* Which URLs were optimized.
+* Any issues or warnings that occurred during processing.
+* Performance metrics for debugging purposes.
+
+## 5. Queue Options
+
+The "Queue Options" section lets you configure how CSS jobs are managed and processed for optimization. This setting is key for users who need to customize the scheduling and handling of CSS optimizations.
+
+**a.Queue**
+
+This section allows you to specify how many CSS URL jobs should run at a time and set the interval between each job. Adjusting these 
+parameters can help balance load management, especially on high-traffic websites.
+
+**Example:** For a smaller site, a lower queue count and shorter intervals may suffice, while larger sites may need a higher count
+with longer intervals for optimal performance.
+
+  
+**b.Disable Auto-queue**
+When this option is enabled, new URLs will not be automatically added to the optimization queue when a user visits them. 
+
+**c.Disable Requeue**
+This option prevents jobs that encounter warnings from being automatically re-added to the queue. This feature ensures that problematic jobs do not repeatedly cycle through the queue without resolution.
+
+## 6.Legacy Dashboard
+
+The Legacy Dashboard section refers to the CSS jobs optimizations table for managing and monitoring RapidLoad CSS optimization.

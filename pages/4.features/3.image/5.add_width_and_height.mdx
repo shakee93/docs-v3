@@ -2,15 +2,13 @@
 title: Add Width and Height Attributes
 --- 
 
-## What Are Width and Height Attributes for Images?
+# Width and Height Attributes
 
-When a browser loads a webpage, it first parses the HTML and then downloads the images. By including explicit width and height attributes for images, the browser can reserve the necessary space for each image, preventing layout shifts during the loading process.
+When a browser loads a webpage, it first parses the HTML and then downloads the images. By including explicit width and height 
+attributes for images, the browser can reserve the necessary space for each image, preventing layout shifts during the loading process.
 
-  
-
-If image dimensions are missing, the browser adjusts the layout after the images are loaded, causing content to move and resulting in **Cumulative Layout Shift (CLS)**. This negatively impacts user experience and Core Web Vitals scores.
-
-  
+If image dimensions are missing, the browser adjusts the layout after the images are loaded, causing content to move and resulting 
+in **Cumulative Layout Shift (CLS)**. This negatively impacts user experience and Core Web Vitals scores.
 
 By adding missing image dimensions, RapidLoad optimizes your site and addresses performance recommendations, including:
 
@@ -19,8 +17,6 @@ By adding missing image dimensions, RapidLoad optimizes your site and addresses 
 
 This ensures a smoother user experience and improved Core Web Vitals scores.
 
-  
-
 ## How to Enable Adding Width and Height Attributes in RapidLoad
 
 1. Go to the **Optimize** tab in the RapidLoad plugin.
@@ -28,16 +24,15 @@ This ensures a smoother user experience and improved Core Web Vitals scores.
 3. Under the **Image** section, find and enable the **Add Width and Height Attributes** option by checking the box.
 4. Click **Save Changes** to apply the settings.
 
-  
+## How Does It Work
 
-## **How Does It Work**
-
-RapidLoad automatically adds missing `width` and `height` attributes to images, optimizing their layout and reducing layout shifts. Here's how it works:
+RapidLoad automatically adds missing `width` and `height` attributes to images, optimizing their layout and reducing layout shifts.
+Here's how it works:
 
 1. **Scanning for Missing Dimensions:**
-    *   RapidLoad scans the HTML for images that have a `src` attribute but lack either the `width` attribute or the `height` attribute.
+    *  RapidLoad scans the HTML for images that have a `src` attribute but lack either the `width` attribute or the `height` attribute.
 2. **Calculating Image Dimensions:**
-    *   Using the PHP `getimagesize` function, RapidLoad retrieves the actual dimensions of the image. It then updates the HTML with the calculated `width` and `height` values.
+    *  Using the PHP `getimagesize` function, RapidLoad retrieves the actual dimensions of the image. It then updates the HTML with the calculated `width` and `height` values.
 
 **Example:**
 
@@ -52,8 +47,6 @@ If the image's dimensions are 800 x 600, RapidLoad updates it to:
 ```plain
 <img src="example.jpg" width="800" height="600" alt="Sample Image">
 ```
-
-  
 
 ## How to Verify
 

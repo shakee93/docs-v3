@@ -5,17 +5,17 @@ title: Preload Fonts
 import { Callout } from 'nextra/components'
 
 
-### **How to Use Preload Fonts**
+# Preload Fonts
 
-The **Preload Fonts** option is a performance enhancement technique that instructs the browser to prioritize downloading specific font files earlier in the loading process. Typically, fonts referenced inside CSS files are only discovered by the browser after the CSS is loaded. Preloading solves this delay, resulting in faster text rendering and improved perceived performance.
+The **Preload Fonts** option is a performance enhancement technique that instructs the browser to prioritize downloading
+specific font files earlier in the loading process. Typically, fonts referenced inside CSS files are only discovered by the
+browser after the CSS is loaded. Preloading solves this delay, resulting in faster text rendering and improved perceived performance.
 
-  
-
-### **How to Choose Fonts to Preload**
+## How to Choose Fonts to Preload
 
 Preloading fonts can significantly enhance page performance by ensuring essential fonts are ready when the page loads. Here's how to decide which fonts to preload:
 
-#### **Identify Fonts to Preload**
+## Identify Fonts to Preload
 
 Google PageSpeed Insights highlights fonts that could benefit from preloading under the **"Preload Key Requests"** opportunity:
 
@@ -28,7 +28,7 @@ Google PageSpeed Insights highlights fonts that could benefit from preloading un
 *   Externally hosted fonts (like Google Fonts) are optimized automatically when using RapidLoad's **Optimize Google Fonts** feature.
 </Callout>
 
-### **Use Preload Only When Necessary**
+## Use Preload Only When Necessary
 
 Preloading fonts can significantly improve page load times, but overusing it may slow down performance. Here are some key guidelines to follow:
 
@@ -43,7 +43,7 @@ By using preload for only critical fonts, you can improve page load times withou
 
   
 
-### **How Preloading Fonts Works**
+## How Preloading Fonts Works
 
 When you enter a font URL for preloading, RapidLoad automatically adds a preload tag to your site's HTML. This tag is placed just after the closing `</title>` tag, ensuring the font is prioritized for loading.
 
@@ -59,9 +59,7 @@ following attributes will be added:
 *   **`as="font"`****:** Defines the resource type as a font file, helping the browser handle it appropriately.
 *   **`crossorigin="anonymous"`****:** Required for cross-origin font loading, allowing the font to be used on your site without security issues.
 
-  
-
-### **Benefits**
+## Benefits
 
 *   **Faster Font Rendering**: Fonts load quickly, allowing text to appear instantly.
 *   **Prevents Layout Shifts**: Avoids issues like invisible text (FOIT) or unstyled text (FOUT).

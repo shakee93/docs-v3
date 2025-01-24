@@ -2,20 +2,19 @@
 title: Lazy Load Images
 --- 
 
-## What is Lazy Loading for Images?
+# Lazy Loading for Images
 
-Lazy loading for images is a technique that defers the loading of images until they are about to enter the user's viewport. By loading images only when needed, you can significantly reduce the initial page load time and improve overall performance.
+Lazy loading for images is a technique that defers the loading of images until they are about to enter the user's viewport.
+By loading images only when needed, you can significantly reduce the initial page load time and improve overall performance.
 
 ## Benefits of Lazy Loading Images:
 
-*   **Faster Page Loading Times**: Only essential content loads immediately, while offscreen images load as the user scrolls.
-*   **Reduced Bandwidth Usage**: Saves data by loading images only when necessary.
-*   **Improved Performance for Users on Slow Networks**: A smoother experience for visitors on mobile devices or slower connections.
-*   **Better SEO and Core Web Vitals**: Improves key performance metrics like **Largest Contentful Paint (LCP)** and **First Input Delay (FID)**.
+*  **Faster Page Loading Times**: Only essential content loads immediately, while offscreen images load as the user scrolls.
+*  **Reduced Bandwidth Usage**: Saves data by loading images only when necessary.
+*  **Improved Performance for Users on Slow Networks**: A smoother experience for visitors on mobile devices or slower connections.
+*  **Better SEO and Core Web Vitals**: Improves key performance metrics like **Largest Contentful Paint (LCP)** and **First Input Delay (FID)**.
 
 With RapidLoad, enabling LazyLoad for images is effortless and enhances your website’s speed and performance.
-
-  
 
 ## How to Enable LazyLoad Images in RapidLoad
 
@@ -24,25 +23,24 @@ With RapidLoad, enabling LazyLoad for images is effortless and enhances your web
 3. Under the **Images** section, find and enable the **LazyLoad Images** option by checking the box.
 4. Click **Save Changes** to apply the settings.
 
-  
-
 ## How to Check if LazyLoad is Working
 
-Lazy loading ensures that images load only when they are needed, optimizing page performance. You can check if it’s working by following these steps:
+Lazy loading ensures that images load only when they are needed, optimizing page performance. You can check if it’s working by 
+following these steps:
 
 1. **Use the Network Tab in Your Browser**
 
-inspect lazy loading behavior through your browser’s developer tools.
+Inspect lazy loading behavior through your browser’s developer tools.
 
-*       *       *   **Open Developer Tools**:In Chrome, navigate to **View > Developer > Developer Tools** or press `Ctrl + Shift + I` (`Cmd + Option + I` on Mac).
-        *   **Click on the Network Tab**:In the developer tools, select the **Network** tab.
-        *   **Filter by Images**:Use the **Img** filter to display only image-related requests.
-        *   **Reload the Page**:Refresh the page. Initially, only images visible in the viewport should load.
-        *   **Scroll Down the Page**:As you scroll, lazy-loaded images will appear as new requests in the Network tab.
+* **Open Developer Tools**:In Chrome, navigate to **View > Developer > Developer Tools** or press `Ctrl + Shift + I` (`Cmd + Option + I` on Mac).
+* **Click on the Network Tab**:In the developer tools, select the **Network** tab.
+* **Filter by Images**:Use the **Img** filter to display only image-related requests.
+* **Reload the Page**:Refresh the page. Initially, only images visible in the viewport should load.
+* **Scroll Down the Page**:As you scroll, lazy-loaded images will appear as new requests in the Network tab.
 
 example: gif
 
-2\. **Check the Page Source for Standard Images**
+2. **Check the Page Source for Standard Images**
 
 LazyLoad modifies the `<img>` tags to enable lazy loading by:
 
@@ -52,8 +50,6 @@ LazyLoad modifies the `<img>` tags to enable lazy loading by:
 ```plain
   <img data-rp-src="https://example.com/image.jpg" loading="lazy" alt="Example Image">
 ```
-
-  
 
 ## How to Exclude Specific Images from LazyLoad
 
@@ -65,14 +61,10 @@ LazyLoad modifies the `<img>` tags to enable lazy loading by:
 /wp-content/uploads/image-name.jpg
 ```
 
-1. Click **Save Changes**.
+4. Click **Save Changes**.
 
 ## Why Use LazyLoad with RapidLoad?
 
 *   **Automatic Setup**: RapidLoad seamlessly integrates LazyLoad without manual coding.
 *   **Performance Boost**: Ensures faster page loads and smoother user experience.
 *   **Customizable Settings**: Allows advanced configurations like adaptive delivery and LQIP placeholders.
-
-  
-
-For more troubleshooting or advanced configurations, refer to the RapidLoad documentation.

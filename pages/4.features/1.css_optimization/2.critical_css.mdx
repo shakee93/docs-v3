@@ -4,7 +4,7 @@ title: Critical CSS
 
 import { Callout } from 'nextra/components'
 
-## What is Critical CSS?   
+# Critical CSS  
 
 Critical CSS is the essential part of your website's styling needed to display the visible (above-the-fold) content immediately. 
 By embedding these critical styles directly into your webpage, you can ensure the main content loads quickly, even before all
@@ -29,7 +29,7 @@ improving Core Web Vitals and delivering a faster, more user-friendly website ex
 
 ## Here's how RapidLoad Critical CSS works:
 
-1. RapidLoad scans your page's structure (the DOM) to find all the CSS files linked to that page.  
+1. RapidLoad scans your page's structure (the DOM) to find all the CSS files linked to that page.
 2. Once it has the CSS files, RapidLoad identifies which styles are used to display the content visible on the screen when the page first loads (above-the-fold content).  
 3. We will generate Critical CSS parallelly for mobile and desktop with separate files for each version. It will then identify the device and serve the specific files for each
 4. These styles are then filtered out and placed directly into the page's HTML as inline CSS, ensuring the page loads faster and looks complete as soon as possible. 
