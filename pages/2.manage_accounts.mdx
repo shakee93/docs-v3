@@ -4,8 +4,16 @@ title: Manage Accounts
 
 import { Cards } from 'nextra/components'
 
- 
-<Cards>
+ <style jsx global>{`
+  
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+`}</style>
+
+<Cards className="cards-container">
   <Cards.Card
     title="Automatic Renewal"
     href="/2.manage_accounts/3.automatic_renewal"

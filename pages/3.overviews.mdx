@@ -4,8 +4,16 @@ title: Overviews
 
 import { Cards } from 'nextra/components'
 
+<style jsx global>{`
+  
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+`}</style>
  
-<Cards>
+<Cards className="cards-container">
   <Cards.Card
     title="Dashboard"
     href="/3.overviews/1.dashboard_overview"
