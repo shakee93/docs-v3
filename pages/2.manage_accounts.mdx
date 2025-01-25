@@ -11,51 +11,145 @@ import { Cards } from 'nextra/components'
     flex-direction: column;
   }
 
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
 `}</style>
 
 <Cards className="cards-container">
   <Cards.Card
-    title="Automatic Renewal"
-    href="/2.manage_accounts/3.automatic_renewal"
-  />
-
-  <Cards.Card
-    title="Cancel Subscription"
-    href="/2.manage_accounts/8.cancel_subscription"
-  />
-
-  <Cards.Card
-    title="Change or Reset your Password"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Change or Reset your Password
+        </div>
+        <div className="card-description">
+          Guidelines for updating or recovering your account password.
+        </div>
+      </div>
+    }
     href="/2.manage_accounts/1.change_or_reset_your_password"
   />
 
   <Cards.Card
-    title="Delete Account"
-    href="/2.manage_accounts/9.delete_account"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Update Details
+        </div>
+        <div className="card-description">
+          Steps to update your account information.
+        </div>
+      </div>
+    }
+    href="/2.manage_accounts/2.update_details"
   />
 
   <Cards.Card
-    title="Where's my Invoice"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Automatic Renewal
+        </div>
+        <div className="card-description">
+          Details about how your subscription renews automatically and managing this option.
+        </div>
+      </div>
+    }
+    href="/2.manage_accounts/3.automatic_renewal"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Where's my Invoice
+        </div>
+        <div className="card-description">
+          Information on accessing and downloading your subscription invoices.
+        </div>
+      </div>
+    }
     href="/2.manage_accounts/4.find_invoice"
   />
 
   <Cards.Card
-    title="Licenses"
-    href="/2.manage_accounts/7.licenses"
-  />
-
-   <Cards.Card
-    title="Manage Subscription"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Manage Subscription
+        </div>
+        <div className="card-description">
+          Instructions for updating or modifying your subscription plan.
+        </div>
+      </div>
+    }
     href="/2.manage_accounts/5.manage_subscription"
   />
 
   <Cards.Card
-    title="Referral Program"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Referral Program
+        </div>
+        <div className="card-description">
+          Details about earning rewards by referring others to RapidLoad.
+        </div>
+      </div>
+    }
     href="/2.manage_accounts/6.referral_program"
   />
 
   <Cards.Card
-    title="Update Details"
-    href="/2.manage_accounts/2.update_details"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Licenses
+        </div>
+        <div className="card-description">
+          Overview of managing and activating licenses for RapidLoad.
+        </div>
+      </div>
+    }
+    href="/2.manage_accounts/7.licenses"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Cancel Subscription
+        </div>
+        <div className="card-description">
+          Instructions on how to cancel your subscription to RapidLoad.
+        </div>
+      </div>
+    }
+    href="/2.manage_accounts/8.cancel_subscription"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Delete Account
+        </div>
+        <div className="card-description">
+          Steps to permanently delete your RapidLoad account.
+        </div>
+      </div>
+    }
+    href="/2.manage_accounts/9.delete_account"
   />
 </Cards>

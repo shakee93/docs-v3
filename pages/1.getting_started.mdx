@@ -5,22 +5,51 @@ title: Getting Started
 import { Cards } from 'nextra/components'
 
 <style jsx global>{`
-  
   .cards-container{
     display: flex;
     flex-direction: column;
   }
 
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
 `}</style>
  
 <Cards className="cards-container">
   <Cards.Card
-    title="Installation"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Installation
+        </div>
+        <div className="card-description">
+          A step-by-step guide to setting up RapidLoad on your WordPress site.
+        </div>
+      </div>
+    }
     href="/1.getting_started/1.installation"
   />
 
   <Cards.Card
-    title="Quick Wizard"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Quick Wizard
+        </div>
+        <div className="card-description">
+          A walkthrough tool to help you configure essential optimization settings quickly.
+        </div>
+      </div>
+    }
     href="/1.getting_started/2.quick_wizard"
   />
 </Cards>
