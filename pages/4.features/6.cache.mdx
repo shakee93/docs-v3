@@ -1,18 +1,55 @@
 ---
-title: Cache
---- 
+title: Cache Optimization
+---
 
 import { Cards } from 'nextra/components'
 
- 
-<Cards>
+<style jsx global>{`
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+`}</style>
+
+<Cards className="cards-container">
   <Cards.Card
-    title="Page Cache"
-    href="/4.features/6.cache/2.page_cache"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Cache Policy
+        </div>
+        <div className="card-description">
+          Define caching rules for your site.
+        </div>
+      </div>
+    }
+    href="/4.features/6.cache/1.cache_policy"
   />
 
   <Cards.Card
-    title="Cache Policy"
-    href="/4.features/6.cache/1.cache_policy"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Page Cache
+        </div>
+        <div className="card-description">
+          Store static versions of pages for faster delivery.
+        </div>
+      </div>
+    }
+    href="/4.features/6.cache/2.page_cache"
   />
 </Cards>

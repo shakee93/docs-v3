@@ -1,18 +1,55 @@
 ---
 title: Font Optimization
---- 
+---
 
 import { Cards } from 'nextra/components'
 
- 
-<Cards>
+<style jsx global>{`
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+`}</style>
+
+<Cards className="cards-container">
   <Cards.Card
-    title="Optimize Google Fonts"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Optimize Google Fonts
+        </div>
+        <div className="card-description">
+          Improve loading performance of Google Fonts on your website.
+        </div>
+      </div>
+    }
     href="/4.features/4.font/1.optimize_google_fonts"
   />
 
   <Cards.Card
-    title="Preload Fonts"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Preload Fonts
+        </div>
+        <div className="card-description">
+          Prioritize loading of essential font files for faster text rendering.
+        </div>
+      </div>
+    }
     href="/4.features/4.font/2.preload_fonts"
   />
 </Cards>

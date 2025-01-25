@@ -1,23 +1,71 @@
 ---
 title: CSS Optimization
---- 
+---
 
 import { Cards } from 'nextra/components'
 
- 
-<Cards>
+<style jsx global>{`
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+`}</style>
+
+<Cards className="cards-container">
   <Cards.Card
-    title="Critical CSS"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Minify CSS
+        </div>
+        <div className="card-description">
+          Reduce the file size of your CSS.
+        </div>
+      </div>
+    }
+    href="/4.features/1.css_optimization/1.minify_css"
+  />
+
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Critical CSS
+        </div>
+        <div className="card-description">
+        Generate CSS essential for above-the-fold content.
+        </div>
+      </div>
+    }
     href="/4.features/1.css_optimization/2.critical_css"
   />
 
   <Cards.Card
-    title="Minify CSS"
-    href="/4.features/1.css_optimization/1.minify_css"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Remove Unused CSS
+        </div>
+        <div className="card-description">
+          Eliminate unnecessary CSS files from loading.
+        </div>
+      </div>
+    }
+    href="/4.features/1.css_optimization/3.remove_unused_css"
   />
 
-  <Cards.Card
-    title="Unused CSS"
-    href="/4.features/1.css_optimization/3.unused_css"
-  />
 </Cards>

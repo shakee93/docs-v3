@@ -1,23 +1,69 @@
 ---
-title: JS Optimization
----   
+title: JavaScript Optimization
+---
 
 import { Cards } from 'nextra/components'
 
- 
-<Cards>
-  <Cards.Card
-    title="Defer JavaScript"
-    href="/4.features/2.js/2.defer_js"
-  />
+<style jsx global>{`
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
 
-  <Cards.Card
-    title="Delay JavaScript"
-    href="/4.features/2.js/3.delay_js"
-  />
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
 
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+`}</style>
+
+<Cards className="cards-container">
   <Cards.Card
-    title="Minify JavaScript"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Minify JavaScript
+        </div>
+        <div className="card-description">
+          Reduce JavaScript file size.
+        </div>
+      </div>
+    }
     href="/4.features/2.js/1.minify_js"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Delay JavaScript
+        </div>
+        <div className="card-description">
+          Postpone non-critical JavaScript until after the page loads.
+        </div>
+      </div>
+    }
+    href="/4.features/2.js/2.delay_js"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Defer JavaScript
+        </div>
+        <div className="card-description">
+          Delay execution of specific JavaScript until user interaction
+        </div>
+      </div>
+    }
+    href="/4.features/2.js/3.defer_js"
   />
 </Cards>
