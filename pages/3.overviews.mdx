@@ -11,26 +11,75 @@ import { Cards } from 'nextra/components'
     flex-direction: column;
   }
 
+  .card-body .card-title{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .card-body .card-description{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
 `}</style>
  
 <Cards className="cards-container">
   <Cards.Card
-    title="Dashboard"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Dashboard
+        </div>
+        <div className="card-description">
+          Get an overview of your site's performance metrics and optimization status.
+        </div>
+      </div>
+    }
     href="/3.overviews/1.dashboard_overview"
   />
 
   <Cards.Card
-    title="Gears"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Gears
+        </div>
+        <div className="card-description">
+          Configure and manage RapidLoad's optimization engines and components.
+        </div>
+      </div>
+    }
     href="/3.overviews/3.gears"
   />
 
   <Cards.Card
-    title="Optimizer"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Optimizer
+        </div>
+        <div className="card-description">
+          Fine-tune your optimization settings for maximum performance gains.
+        </div>
+      </div>
+    }
     href="/3.overviews/2.optimizer_overview"
   />
 
   <Cards.Card
-    title="Page Speed Audits"
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Page Speed Audits
+        </div>
+        <div className="card-description">
+          Analyze and track your website's performance metrics and improvements.
+        </div>
+      </div>
+    }
     href="/3.overviews/4.page_speed_audits"
   />
 </Cards>
