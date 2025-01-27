@@ -81,5 +81,4 @@ export default {
     type: 'page',
     href: 'https://x.com/_rapidload',
   },
-  
 }
