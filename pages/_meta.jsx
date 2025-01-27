@@ -1,5 +1,37 @@
 
 export default {
+  getting_started: {
+    title: 'Getting Started',
+    sidebar: true,
+    order: 1,
+  },
+  manage_accounts: {
+    title: 'Manage Accounts',
+    sidebar: true,
+    order: 2,
+  },
+  overviews: {
+    title: 'Overviews',
+    sidebar: true,
+    order: 3,
+  },
+  features: {
+    title: 'Features',
+    sidebar: true,
+    order: 4,
+  },
+  general_settings: {
+    title: 'General Settings',
+    sidebar: true,
+    order: 5,
+  },
+  faq: {
+    title: 'FAQ',
+    sidebar: true,
+    order: 6,
+  },
+
+  //Navbar
   index: {
     title: 'Home',
     theme: {
@@ -49,5 +81,5 @@ export default {
     type: 'page',
     href: 'https://x.com/_rapidload',
   },
-
+  
 }

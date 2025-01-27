@@ -20,7 +20,6 @@ export default {
         <path fill-rule="evenodd" clip-rule="evenodd" d="M29.2025 6.39478L21.8325 11.3252L14.4626 16.1863L13.8248 15.0752L13.187 13.9641L21.1948 10.2141L29.2025 6.39478Z" fill="black" />
         <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6829 5.07538L29.6279 7.15867H29.557L29.4861 7.08923C29.4153 6.81146 29.3444 6.53368 29.2027 6.32536C29.0609 6.11703 28.9192 5.9087 28.7066 5.70037C28.6357 5.70037 28.6357 5.63092 28.6357 5.56148C28.6357 5.56148 28.6357 5.56148 28.7066 5.49204L31.6121 4.79761C31.6829 4.79761 31.6829 4.79761 31.6829 4.86705C31.7538 5.00594 31.7538 5.07538 31.6829 5.07538Z" fill="black" />
       </svg>
-
     </>
   ),
   darkMode: false,
@@ -29,8 +28,9 @@ export default {
     defaultTheme: "light",
     enableSystem: false,
   },
-
   sidebar: {
-    toggleButton: false
+    defaultMenuCollapseLevel: 2,
+    toggleButton: false,
+    autoCollapse: true
   }
 };

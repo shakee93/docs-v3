@@ -1,5 +1,5 @@
 ---
-title: Cache Optimization
+title: Font Optimization
 ---
 
 import { Cards } from 'nextra/components'
@@ -25,18 +25,31 @@ import { Cards } from 'nextra/components'
 `}</style>
 
 <Cards className="cards-container">
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Optimize Google Fonts
+        </div>
+        <div className="card-description">
+          Improve loading performance of Google Fonts on your website.
+        </div>
+      </div>
+    }
+    href="/features/font/optimize_google_fonts"
+  />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Page Cache
+          Preload Fonts
         </div>
         <div className="card-description">
-          Store static versions of pages for faster delivery.
+          Prioritize loading of essential font files for faster text rendering.
         </div>
       </div>
     }
-    href="/4.features/6.cache/2.page_cache"
+    href="/features/font/preload_fonts"
   />
 </Cards>

@@ -1,5 +1,5 @@
 ---
-title: CSS Optimization
+title: Cache Optimization
 ---
 
 import { Cards } from 'nextra/components'
@@ -29,43 +29,27 @@ import { Cards } from 'nextra/components'
     title={
       <div className="card-body">
         <div className="card-title">
-          Minify CSS
+          Cache Policy
         </div>
         <div className="card-description">
-          Reduce the file size of your CSS.
+          Define caching rules for your site.
         </div>
       </div>
     }
-    href="/4.features/1.css_optimization/1.minify_css"
-  />
-
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Critical CSS
-        </div>
-        <div className="card-description">
-        Generate CSS essential for above-the-fold content.
-        </div>
-      </div>
-    }
-    href="/4.features/1.css_optimization/2.critical_css"
+    href="/features/cache/cache_policy"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Remove Unused CSS
+          Page Cache
         </div>
         <div className="card-description">
-          Eliminate unnecessary CSS files from loading.
+          Store static versions of pages for faster delivery.
         </div>
       </div>
     }
-    href="/4.features/1.css_optimization/3.remove_unused_css"
+    href="/features/cache/page_cache"
   />
-
 </Cards>
