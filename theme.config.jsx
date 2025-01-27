@@ -24,5 +24,8 @@ export default {
     </>
   ),
   darkMode: false,
-  // ... other theme options
-}
+  nextThemes: {
+    defaultTheme: "light",
+    enableSystem: false,
+  },
+};
