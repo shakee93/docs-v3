@@ -24,8 +24,13 @@ export default {
     </>
   ),
   darkMode: false,
+  hideSidebar: false,
   nextThemes: {
     defaultTheme: "light",
     enableSystem: false,
   },
+
+  sidebar: {
+    toggleButton: false
+  }
 };

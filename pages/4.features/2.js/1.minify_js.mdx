@@ -13,34 +13,32 @@ loading. It improves website speed, enhances user experience, and boosts SEO wit
 ## Here's how RapidLoad Minify JS works:
 
 1. **Identifying JavaScript Files:**
-*   RapidLoad searches your website's Document Object Model (DOM) for files with the `.js` extension.
+    *   RapidLoad searches your website's Document Object Model (DOM) for files with the `.js` extension.
 
 2. **Minifying JavaScript Files:**
-*   Once identified, RapidLoad proceeds to minify these JavaScript files for optimized performance.
+    *   Once identified, RapidLoad proceeds to minify these JavaScript files for optimized performance.
 
 3. **Minifying Inline JavaScript:**
-*   Inline JavaScript within `<script>` tags is minified and served in real-time.
+    *   Inline JavaScript within `<script>` tags is minified and served in real-time.
 
 4. **Storage of Minified Files:**
-*   RapidLoad stores minified files at `wp-content/cache/rapidload/min-js/{file-name}-{file-content-hash}.min.js.`
-*   RapidLoad does not save the minified inline JavaScript as a file.
+    *   RapidLoad stores minified files at `wp-content/cache/rapidload/min-js/{file-name}-{file-content-hash}.min.js.`
+    *   RapidLoad does not save the minified inline JavaScript as a file.
 
 5. **Clearing Minified Files:**
-*   You can clear the minified JavaScript files by clicking the **Clear CSS/JS/Font Optimizations** button once you hover over the RapidLoad admin button on the WordPress dashboard bar.
+    *   You can clear the minified JavaScript files by clicking the **Clear CSS/JS/Font Optimizations** button once you hover over the RapidLoad admin button on the WordPress dashboard bar.
 
 6. **Replacing Original Files:**
-*   The original JavaScript files are not deleted but are replaced with minified JavaScript files renamed with the `Src` and version `(?ver=xxx)` details.
-    *  Original file: `https://demo.rapidload.io/wp-includes/js/script.js?ver=6.3.2`
-    *  Minified file: `https://demo.rapidload.io/wp-content/cache/rapidload/min-js/script-9a7d09a200c6.min.js`
+    *   The original JavaScript files are not deleted but are replaced with minified JavaScript files renamed with the `Src` and version `(?ver=xxx)` details.
+        *  Original file: `https://demo.rapidload.io/wp-includes/js/script.js?ver=6.3.2`
+        *  Minified file: `https://demo.rapidload.io/wp-content/cache/rapidload/min-js/script-9a7d09a200c6.min.js`
 7. **Re-minification on Version Change:**
-*   RapidLoad will re-minify and serve files if the original files undergo version changes.
+    *   RapidLoad will re-minify and serve files if the original files undergo version changes.
 
 ## Automatic Exclusions
 
 1. **Third-party JavaScript Files:**
-*   JavaScript hosted on a different domain is excluded from optimization.
-
-  
+    *   JavaScript hosted on a different domain is excluded from optimization.
 
 2. **Already Minified Files:**
-*   Files marked with the `.min.js` extension are automatically skipped.
+    *   Files marked with the `.min.js` extension are automatically skipped.

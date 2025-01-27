@@ -61,8 +61,7 @@ temporary and will not overwrite your original CSS files.
 ability to update or revert changes as needed.
 </Callout>
 
-## How to check if RapidLoad Unused CSS is generated
-(img)
+## How to enable Unused CSS removal
 
 1. Go to the **Optimize** tab in the RapidLoad plugin
 2. Click on the **Customize Settings** dropdown
@@ -84,29 +83,26 @@ ability to update or revert changes as needed.
 1. **In the optimizer**: You will see a green bullet point and the text 
 "Optimized," indicating the RapidLoad unused CSS file is generated and served on 
 your site  
-(img)
 
 2. To verify if unused CSS is removed on a **specific page**:  
-(img)
 
-* **View the page as a logged-out user**: Make sure you're not logged into the WordPress backend when accessing the page. 
+    * **View the page as a logged-out user**: Make sure you're not logged into the WordPress backend when accessing the page. 
 If you prefer not to log out, you can open the page in Incognito mode instead.
 
-* **Open Inspect**: Right-click on the page and select "_Inspect_" 
+    * **Open Inspect**: Right-click on the page and select "_Inspect_" 
 (or press `Ctrl + Shift + I` on Windows, `Cmd + Option + I` on Mac).
 
-* Navigate to the Network Tab **Check for RapidLoad Generated files**: In the "_network_" tab, look for the CSS stylesheets starting with `uucss` This 
+    * Navigate to the Network Tab **Check for RapidLoad Generated files**: In the "_network_" tab, look for the CSS stylesheets starting with `uucss` This 
 confirms that the Unused CSS is successfully generated and served.
 
 ## How to regenerate Unused CSS
 To regenerate Unused CSS, click the settings button located next to the Remove 
 Unused CSS option.
 
-(img)
 
 After clicking, a popup will appear where you can find the regenerate button at 
 the bottom.
-(img)
+
 Press this button to regenerate the unused CSS.
 
 ## Why regenerate Unused CSS
@@ -119,14 +115,12 @@ in the currently generated files.
 * **Failed status:** A blinking red dot with the text "_Failed_" indicates that
 Unused CSS generation has failed; hover over the dot to see the reason, resolve 
 the issue, and regenerate the Unused CSS.
-(img)
 
 *  **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
 first-out basis; refer to the "Managing the Job Table" documentation for details.
 If the URL you’re viewing is in the optimization queue, this message will appear;
 to prioritize it, you can regenerate the URL.
 
-(img)
 
 If enabling RapidLoad Unused CSS causes layout breaks on your site, refer to the
 documentation for guidance on resolving the issue.

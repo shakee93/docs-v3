@@ -35,20 +35,18 @@ following these steps:
 
 Inspect lazy loading behavior through your browser’s developer tools.
 
-* **Open Developer Tools**:In Chrome, navigate to **View > Developer > Developer Tools** or press `Ctrl + Shift + I` (`Cmd + Option + I` on Mac).
-* **Click on the Network Tab**:In the developer tools, select the **Network** tab.
-* **Filter by Images**:Use the **Img** filter to display only image-related requests.
-* **Reload the Page**:Refresh the page. Initially, only images visible in the viewport should load.
-* **Scroll Down the Page**:As you scroll, lazy-loaded images will appear as new requests in the Network tab.
-
-example: gif
+  * **Open Developer Tools**:In Chrome, navigate to **View > Developer > Developer Tools** or press `Ctrl + Shift + I` (`Cmd + Option + I` on Mac).
+  * **Click on the Network Tab**:In the developer tools, select the **Network** tab.
+  * **Filter by Images**:Use the **Img** filter to display only image-related requests.
+  * **Reload the Page**:Refresh the page. Initially, only images visible in the viewport should load.
+  * **Scroll Down the Page**:As you scroll, lazy-loaded images will appear as new requests in the Network tab.
 
 2. **Check the Page Source for Standard Images**
 
 LazyLoad modifies the `<img>` tags to enable lazy loading by:
 
-*   Adding the `data-rp-src` attribute to store the image URL.
-*   Adding the `loading="lazy"` attribute for browser-based lazy loading.
+  *   Adding the `data-rp-src` attribute to store the image URL.
+  *   Adding the `loading="lazy"` attribute for browser-based lazy loading.
 
 ```plain
   <img data-rp-src="https://example.com/image.jpg" loading="lazy" alt="Example Image">
