@@ -1,0 +1,77 @@
+---
+title: Test Mode
+---
+
+import { Callout } from 'nextra/components'
+
+# Test Mode
+
+<Callout emoji="📒">
+  _When Test Mode is activated in RapidLoad, any changes made will not be immediately visible or applied to your site. Instead, these modifications are temporarily stored,
+  allowing you to review and evaluate their impact at your convenience before making them live._
+</Callout>
+
+## Enabling Test Mode
+
+Test Mode can be accessed both in the _Dashboard_ and  _Optimize_ sections_._
+
+In Test Mode, you can switch between two modes that control how optimizations are applied:
+
+1\. **Live:** Selecting this option will apply the optimizations to the live URL, making the changes visible to all users.
+
+2\. **Test Mode:** When this option is selected, the optimizations will not be applied to the live site. This allows you to safely test and review changes without affecting the live environment.
+
+## What is Test Mode and How Does It Work?
+
+Test Mode allows you to preview how an optimized URL will appear before applying the changes to your live site. This feature provides an opportunity to review and ensure that the optimizations meet your 
+expectations, helping to avoid any potential issues when the changes go live.
+
+When you enable Test Mode, it creates a controlled environment where RapidLoad optimizations are kept separate from your live site. To review the modifications, simply add the query parameter 
+\`rapidload\_preview\` to the end of your URL. This triggers the display of the stored optimizations, giving you a comprehensive view of the proposed changes before they are applied to the live site.
+
+**Benefits of Test Mode:**
+
+1. **Review Changes Safely**: _Test Mode lets you check RapidLoad optimization in a safe environment. You can see how changes affect your site’s layout and functionality before making them live._ 
+2. **Experiment Without Risk**: _Test Mode allows you to try out different optimization settings without affecting your live site. This means you can test and tweak configurations without interrupting your visitor’s experience._
+
+
+## Utilizing Test Mode - Example
+
+If you want to add extra CSS to your site and see if it causes any layout shifts, you can use Test Mode. Simply enable Test Mode, add your CSS changes, and save them.
+
+These changes will only be visible when you add the query parameter **/?rapidload\_preview** to your URL. You’ll need to use this URL with the query parameter in tools like Google PageSpeed Insights, 
+GTmetrix, and other page speed performance testing tools to see the changes.
+
+You can confidently view the changes on your live website if there are no broken pages. Follow these steps:
+
+1. Turn off Test Mode.
+2. Save the changes.
+3. Clear the cache, open the URL in incognito mode, and check the changes on your live site.
+
+When using RapidLoad’s Test Mode, keep the following in mind:
+
+1\. **Optimizations are not visible on the live site**:  
+
+   While Test Mode is active, any optimizations you make will not be applied to the live version of your website. Instead, they are only applied to the preview URL.
+
+  
+
+2\. **Test Mode and Google PageSpeed Insights**:  
+
+   If you are trying to evaluate your website's performance with Google PageSpeed Insights while Test Mode is on, the optimizations won’t be reflected on the live site. Running PageSpeed on your regular site URL will not show the applied optimizations.
+
+  
+
+3\. **Use the Preview URL for testing**:  
+
+   To properly test your optimizations using Google PageSpeed Insights, make sure you run the test on the preview URL. This is where all the changes are active when Test Mode is enabled.
+
+  
+
+4\. **Optimizations only apply to the preview URL**:  
+
+   Any changes or improvements made during Test Mode are restricted to the preview URL. To see these optimizations live, you’ll need to disable Test Mode and apply the changes to the main site.
+
+  
+
+By following these steps, you can accurately test and assess the performance improvements made with RapidLoad while Test Mode is enabled.
