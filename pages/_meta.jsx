@@ -6,23 +6,23 @@ export default {
     sidebar: true,
     order: 1,
   },
-  manage_accounts: {
-    title: 'Manage Accounts',
+  using_plugin: {
+    title: 'Using Plugin',
     sidebar: true,
     order: 2,
   },
-  overviews: {
-    title: 'Overviews',
+  custom_settings: {
+    title: 'Custom Settings',
     sidebar: true,
     order: 3,
   },
-  features: {
-    title: 'Features',
+  general_settings: {
+    title: 'General Settings',
     sidebar: true,
     order: 4,
   },
-  general_settings: {
-    title: 'General Settings',
+  manage_accounts: {
+    title: 'Manage Accounts',
     sidebar: true,
     order: 5,
   },

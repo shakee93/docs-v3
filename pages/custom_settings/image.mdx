@@ -1,11 +1,10 @@
 ---
-title: Overviews
----
+title: Image Optimization
+---   
 
 import { Cards } from 'nextra/components'
 
 <style jsx global>{`
-  
   .cards-container{
     display: flex;
     flex-direction: column;
@@ -23,92 +22,76 @@ import { Cards } from 'nextra/components'
     font-weight: 400;
     margin-top: 10px;
   }
-
 `}</style>
- 
+
 <Cards className="cards-container">
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Dashboard
+          Serve Next Gen Image
         </div>
         <div className="card-description">
-         An overview of your RapidLoad account, including CDN usage, cache summary, and performance scores.
+          Deliver images in modern formats
         </div>
       </div>
     }
-    href="/overviews/dashboard_overview"
+    href="/custom_settings/image/serve_next_gen_img"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Gears
+          Lazy Load Images
         </div>
         <div className="card-description">
-          Three optimization levels (Starter, Accelerator, Turbomax) to customize
-          your website's performance settings.
+          Load images as users scroll down the page.
         </div>
       </div>
     }
-    href="/overviews/gears"
+    href="/custom_settings/image/lazy_load_img"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Optimizer
+          Lazy Load iFrames
         </div>
         <div className="card-description">
-          A centralized interface to configure and apply all optimizations.
+          Defer loading of iframes until they are needed.
         </div>
       </div>
     }
-    href="/overviews/optimizer_overview"
+    href="/custom_settings/image/lazy_load_iframes"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Page Speed Audits
+          Exclude Above the Fold Image
         </div>
         <div className="card-description">
-          Tools to analyze and monitor your website’s performance scores.
+          Ensure above-the-fold images load immediately.
         </div>
       </div>
     }
-    href="/overviews/page_speed_audits"
+    href="/custom_settings/image/exclude_above_the_fold_img"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          AI Diagnostics
+          Add Width and Height Attributes
         </div>
         <div className="card-description">
-          A diagnostic report for your website's performance.
+          Specify image dimensions to prevent layout shifts during page load.
         </div>
       </div>
     }
-    href="/overviews/ai_diagnostics"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Test Mode
-        </div>
-        <div className="card-description">
-          Learn how to use Test Mode to test changes without affecting your live website.
-        </div>
-      </div>
-    }
-    href="/overviews/test-mode"
+    href="/custom_settings/image/add_width_and_height"
   />
 </Cards>
