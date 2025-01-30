@@ -31,7 +31,7 @@ export default {
     enableSystem: false,
   },
   sidebar: {
-    defaultMenuCollapseLevel: 2,
+    defaultMenuCollapseLevel: 1,
     toggleButton: false,
     autoCollapse: true
   },
