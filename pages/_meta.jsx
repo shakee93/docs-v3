@@ -1,12 +1,12 @@
 
 export default {
  
-  getting_started: {
+  "getting-started": {
     title: 'Getting Started',
     sidebar: true,
     order: 1,
   },
-  using_plugin: {
+  "using-plugin": {
     title: 'Using Plugin',
     sidebar: true,
     order: 2,
@@ -14,14 +14,14 @@ export default {
   custom_settings: {
     title: 'Custom Settings',
     sidebar: true,
-    order: 3,
+    order: 3
   },
-  general_settings: {
-    title: 'General Settings',
+  "general-settings": {
+    title: "General Settings",
     sidebar: true,
-    order: 4,
+    order: 4
   },
-  manage_accounts: {
+  "manage-accounts": {
     title: 'Manage Accounts',
     sidebar: true,
     order: 5,
