@@ -1,10 +1,11 @@
 ---
-title: Image Optimization
----   
+title: Custom Settings
+---
 
 import { Cards } from 'nextra/components'
 
 <style jsx global>{`
+  
   .cards-container{
     display: flex;
     flex-direction: column;
@@ -22,76 +23,92 @@ import { Cards } from 'nextra/components'
     font-weight: 400;
     margin-top: 10px;
   }
-`}</style>
 
+`}</style>
+ 
 <Cards className="cards-container">
   <Cards.Card
     title={
       <div className="card-body">
-        <div className="card-title">
-          Serve Next Gen Image
+         <div className="card-title">
+          CSS Optimization
         </div>
         <div className="card-description">
-          Deliver images in modern formats
+          Optimize your site’s CSS to improve loading times
         </div>
       </div>
     }
-    href="/custom_settings/image/serve_next_gen_img"
+    href="/custom-settings/css-optimization"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Lazy Load Images
+          JavaScript Optimization
         </div>
         <div className="card-description">
-          Load images as users scroll down the page.
+          Improve JavaScript performance
         </div>
       </div>
     }
-    href="/custom_settings/image/lazy_load_img"
+    href="/custom-settings/js"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Lazy Load iFrames
+          Image Optimization
         </div>
         <div className="card-description">
-          Defer loading of iframes until they are needed.
+          Enhance how images load on your website
         </div>
       </div>
     }
-    href="/custom_settings/image/lazy_load_iframes"
+    href="/custom-settings/image"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Exclude Above the Fold Image
+          Font Optimization
         </div>
         <div className="card-description">
-          Ensure above-the-fold images load immediately.
+          Improve loading times for fonts
         </div>
       </div>
     }
-    href="/custom_settings/image/exclude_above_the_fold_img"
+    href="/custom-settings/font"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Add Width and Height Attributes
+          Cache Optimization
         </div>
         <div className="card-description">
-          Specify image dimensions to prevent layout shifts during page load.
+          Optimize caching strategies for your website.
         </div>
       </div>
     }
-    href="/custom_settings/image/add_width_and_height"
+    href="/custom-settings/cache"
   />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          CDN Optimization
+        </div>
+        <div className="card-description">
+        Manage content delivery through a CDN to improve global site loading speeds.
+        </div>
+      </div>
+    }
+    href="/custom-settings/cdn"
+  />
+
 </Cards>

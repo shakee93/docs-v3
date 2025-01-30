@@ -11,7 +11,7 @@ export default {
     sidebar: true,
     order: 2,
   },
-  custom_settings: {
+  "custom-settings": {
     title: 'Custom Settings',
     sidebar: true,
     order: 3

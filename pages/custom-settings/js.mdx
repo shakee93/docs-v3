@@ -1,5 +1,5 @@
 ---
-title: Font Optimization
+title: JavaScript Optimization
 ---
 
 import { Cards } from 'nextra/components'
@@ -29,27 +29,41 @@ import { Cards } from 'nextra/components'
     title={
       <div className="card-body">
         <div className="card-title">
-          Optimize Google Fonts
+          Minify JavaScript
         </div>
         <div className="card-description">
-          Improve loading performance of Google Fonts on your website.
+          Reduce JavaScript file size.
         </div>
       </div>
     }
-    href="/custom_settings/font/optimize_google_fonts"
+    href="/custom-settings/js/minify-js"
   />
 
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Preload Fonts
+          Delay JavaScript
         </div>
         <div className="card-description">
-          Prioritize loading of essential font files for faster text rendering.
+          Postpone non-critical JavaScript until after the page loads.
         </div>
       </div>
     }
-    href="/custom_settings/font/preload_fonts"
+    href="/custom-settings/js/delay-js"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Defer JavaScript
+        </div>
+        <div className="card-description">
+          Delay execution of specific JavaScript until user interaction
+        </div>
+      </div>
+    }
+    href="/custom-settings/js/defer-js"
   />
 </Cards>

@@ -1,5 +1,5 @@
 export default {
-    css_optimization: {
+    css: {
         title: 'CSS Optimization',
         sidebar: true,
         order: 1,
