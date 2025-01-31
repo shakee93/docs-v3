@@ -37,12 +37,13 @@ import "cal-sans";
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    letterSpacing: '0.8px'
   }
 
   .nextra-cards .nextra-card {
     width: 350px !important;
-    height: 310px !important;
-    padding: 15px !important;
+    height: auto !important;
+    padding:15px !important;
     border: none !important;
     border-radius: 28px !important;
     padding-right: 10px !important;
@@ -79,6 +80,7 @@ import "cal-sans";
     font-weight: bold !important;
     color: black !important;
     font-family: 'Cal Sans' !important;
+    letterSpacing: '0.8px'
   }
 
   .card-img{
@@ -88,6 +90,7 @@ import "cal-sans";
     box-shadow: none;
     border-radius: unset;
     margin-bottom: 10px;
+    border:none !important;
   }
 
   .nextra-cards .nextra-card[href="/getting-started"] {
@@ -175,13 +178,15 @@ import "cal-sans";
     zIndex: 1,
     width: '100%'
   }}>
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'center', marginRight: '20px', marginLeft: '20px' }}>
       <h1 style={{ 
         fontSize: '40px',
         fontWeight: 'bold',
         marginBottom: '1rem',
         color: 'white',
-        fontFamily: 'Cal Sans'
+        fontFamily: 'Cal Sans',
+        letterSpacing: '0.8px',
+        lineHeight: '1.2'
       }}>Getting started with RapidLoad Documentation</h1>
       <p className="hero-description-2">Learn how to fix PageSpeed issues and improve your PageSpeed Score</p>
     </div>

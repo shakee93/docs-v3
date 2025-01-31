@@ -36,11 +36,12 @@ export default {
   },
   footer: {
     component: () =>
-      <div>
+      <div className="pages-footer">
 
-        <hr style={{ width: '50%', border: '1px solid #DEDEDE', margin: '20px auto' }} />
+        <hr style={{ width: '60%', border: '1px solid #DEDEDE', margin: '20px auto' }} />
 
-        <div className="footer" style={{ width: '50%', margin: '0 auto' }}>
+        <div className="footer" style={{ width: '60%', margin: '0 auto' }}>
+          
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
             <a href="https://x.com/_rapidload" style={{ color: '#fff', margin: '0 10px' }}>
               <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +55,7 @@ export default {
             </a>
           </div>
 
-          <div>
+          <div className="footer-copyright-desktop" style={{  }}>
             <span>Copyright © 2025 RapidLoad</span>
           </div>
 
@@ -62,6 +63,11 @@ export default {
             <a href="#" style={{ margin: '5px 0' }}>Terms</a>
             <a href="#" style={{ margin: '5px 0' }}>Privacy Policy</a>
           </div>
+
+          <div className="footer-copyright-mobile">
+            <span>Copyright © 2025 RapidLoad</span>
+          </div>
+
         </div>
       </div>
   }
