@@ -27,35 +27,7 @@ import { Cards } from 'nextra/components'
 `}</style>
 
 <Cards className="cards-container">
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Change or Reset your Password
-        </div>
-        <div className="card-description">
-          Guidelines for updating or recovering your account password.
-        </div>
-      </div>
-    }
-    href="/manage-accounts/change-or-reset-your-password"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Update Details
-        </div>
-        <div className="card-description">
-          Steps to update your account information.
-        </div>
-      </div>
-    }
-    href="/manage-accounts/update-details"
-  />
-
-  <Cards.Card
+    <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
@@ -73,6 +45,48 @@ import { Cards } from 'nextra/components'
     title={
       <div className="card-body">
         <div className="card-title">
+          Cancel Subscription
+        </div>
+        <div className="card-description">
+          Instructions on how to cancel your subscription to RapidLoad.
+        </div>
+      </div>
+    }
+    href="/manage-accounts/cancel-subscription"
+  />
+
+    <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Change or Reset your Password
+        </div>
+        <div className="card-description">
+          Guidelines for updating or recovering your account password.
+        </div>
+      </div>
+    }
+    href="/manage-accounts/change-or-reset-your-password"
+  />
+
+    <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Delete Account
+        </div>
+        <div className="card-description">
+          Steps to permanently delete your RapidLoad account.
+        </div>
+      </div>
+    }
+    href="/manage-accounts/delete-account"
+  />
+
+    <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
           Where's my Invoice
         </div>
         <div className="card-description">
@@ -81,6 +95,20 @@ import { Cards } from 'nextra/components'
       </div>
     }
     href="/manage-accounts/find-invoice"
+  />
+
+    <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Licenses
+        </div>
+        <div className="card-description">
+          Overview of managing and activating licenses for RapidLoad.
+        </div>
+      </div>
+    }
+    href="/manage-accounts/licenses"
   />
 
   <Cards.Card
@@ -115,41 +143,13 @@ import { Cards } from 'nextra/components'
     title={
       <div className="card-body">
         <div className="card-title">
-          Licenses
+          Update Details
         </div>
         <div className="card-description">
-          Overview of managing and activating licenses for RapidLoad.
+          Steps to update your account information.
         </div>
       </div>
     }
-    href="/manage-accounts/licenses"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Cancel Subscription
-        </div>
-        <div className="card-description">
-          Instructions on how to cancel your subscription to RapidLoad.
-        </div>
-      </div>
-    }
-    href="/manage-accounts/cancel-subscription"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Delete Account
-        </div>
-        <div className="card-description">
-          Steps to permanently delete your RapidLoad account.
-        </div>
-      </div>
-    }
-    href="/manage-accounts/delete-account"
+    href="/manage-accounts/update-details"
   />
 </Cards>

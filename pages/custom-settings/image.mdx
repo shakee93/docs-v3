@@ -25,20 +25,50 @@ import { Cards } from 'nextra/components'
 `}</style>
 
 <Cards className="cards-container">
+
   <Cards.Card
     title={
       <div className="card-body">
         <div className="card-title">
-          Serve Next Gen Image
+          Add Width and Height Attributes
         </div>
         <div className="card-description">
-          Deliver images in modern formats
+          Specify image dimensions to prevent layout shifts during page load.
         </div>
       </div>
     }
-    href="/custom-settings/image/serve-next-gen-img"
+    href="/custom-settings/image/add-width-and-height"
   />
 
+    <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Exclude Above the Fold Image
+        </div>
+        <div className="card-description">
+          Ensure above-the-fold images load immediately.
+        </div>
+      </div>
+    }
+    href="/custom-settings/image/exclude-above-the-fold-img"
+  />
+
+  <Cards.Card
+    title={
+      <div className="card-body">
+        <div className="card-title">
+          Lazy Load iFrames
+        </div>
+        <div className="card-description">
+          Defer loading of iframes until they are needed.
+        </div>
+      </div>
+    }
+    href="/custom-settings/image/lazy-load-iframes"
+  />
+
+  
   <Cards.Card
     title={
       <div className="card-body">
@@ -57,41 +87,13 @@ import { Cards } from 'nextra/components'
     title={
       <div className="card-body">
         <div className="card-title">
-          Lazy Load iFrames
+          Serve Next Gen Image
         </div>
         <div className="card-description">
-          Defer loading of iframes until they are needed.
+          Deliver images in modern formats
         </div>
       </div>
     }
-    href="/custom-settings/image/lazy-load-iframes"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Exclude Above the Fold Image
-        </div>
-        <div className="card-description">
-          Ensure above-the-fold images load immediately.
-        </div>
-      </div>
-    }
-    href="/custom-settings/image/exclude-above-the-fold-img"
-  />
-
-  <Cards.Card
-    title={
-      <div className="card-body">
-        <div className="card-title">
-          Add Width and Height Attributes
-        </div>
-        <div className="card-description">
-          Specify image dimensions to prevent layout shifts during page load.
-        </div>
-      </div>
-    }
-    href="/custom-settings/image/add-width-and-height"
+    href="/custom-settings/image/serve-next-gen-img"
   />
 </Cards>
