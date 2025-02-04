@@ -6,7 +6,7 @@ html .nextra-callout {
 
 img {
   /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
 
@@ -24,8 +24,23 @@ img {
   font-weight: 800;
 }
 
+
 .nextra-toc-footer {
   display: none !important;
+}
+
+.nextra-content p {
+  font-family: 'Manrope' !important;
+}
+
+.nextra-menu-desktop {
+  font-family: 'Manrope' !important;
+
+}
+
+.nextra-scrollbar {
+  font-family: 'Manrope' !important;
+  font-weight: 600 !important;
 }
 
 /*.nextra-toc ._sticky {
