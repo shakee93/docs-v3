@@ -6,11 +6,10 @@
     }
   ],
   "outputDirectory": "public",
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/v2",
-      "destination": "https://rapidload-docs.vercel.app/",
-      "permanent": true
+      "source": "/v2/:path*",
+      "destination": "https://rapidload-docs.vercel.app/:path*"
     }
   ]
 }
