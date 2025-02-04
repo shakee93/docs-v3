@@ -51,7 +51,7 @@ export default {
       "version2.0": {
         "title": "Version 2.0",
         "type": "page",
-        "href": "https://docs.rapidload.io/",
+        "href": "https://rapidload-docs.vercel.app/",
         "newWindow": true
       },
       "version1.0": {

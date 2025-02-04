@@ -31,7 +31,7 @@ export default {
   banner: {
     key: 'announcement',
     content: () => <span>
-      🎉 Coming Soon 🎉
+      🎉 RapidLoad 3.0 Coming Soon 🎉
     </span>,
   },
   footer: {
