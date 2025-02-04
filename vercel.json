@@ -5,5 +5,14 @@
       "use": "@vercel/next"
     }
   ],
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "redirects": [
+    {
+      "source": "/v2",
+      "destination": "https://rapidload-docs.vercel.app/",
+      "permanent": true
+    }
+  ]
 }
+
+
