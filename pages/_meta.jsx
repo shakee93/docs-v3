@@ -53,7 +53,14 @@ export default {
         "type": "page",
         "href": "https://docs.rapidload.io/",
         "newWindow": true
+      },
+      "version1.0": {
+        "title": "Version 1.0",
+        "type": "page",
+        "href": "https://rapidload.zendesk.com/hc/en-us/categories/360006008913-Wordpress-Plugin",
+        "newWindow": true
       }
+
     }
   },
 
