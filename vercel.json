@@ -28,8 +28,8 @@
       "destination": "https://rapidload-docs.vercel.app/landing/:path*"
     },
     {
-      "source": "/features/:path*",
-      "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
+      "source": "/v2/features/:path*",
+      "destination": "https://rapidload-docs.vercel.app/features/:path*"
     },
     {
       "source": "/v2/guides/:path*",
