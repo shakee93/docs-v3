@@ -8,10 +8,47 @@
   "outputDirectory": "public",
   "rewrites": [
     {
+      "source": "/v2",
+      "destination": "https://rapidload-docs.vercel.app/v2"
+    },
+    {
+      "source": "/v2/_nuxt/:path*",
+      "destination": "https://rapidload-docs.vercel.app/_nuxt/:path*"
+    },
+    {
+      "source": "/v2/api/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/api/:path*"
+    },
+    {
+      "source": "/v2/assets/:path*",
+      "destination": "https://rapidload-docs.vercel.app/assets/:path*"
+    },
+    {
+      "source": "/v2/landing/:path*",
+      "destination": "https://rapidload-docs.vercel.app/landing/:path*"
+    },
+    {
+      "source": "/features/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
+    },
+    {
+      "source": "/v2/features/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
+    },
+    {
+      "source": "/v2/guides/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/guides/:path*"
+    },
+    {
+      "source": "/v2/logo-dark.svg",
+      "destination": "https://rapidload-docs.vercel.app/logo-dark.svg"
+    },
+    {
       "source": "/v2/:path*",
-      "destination": "https://rapidload-docs.vercel.app/:path*"
+      "destination": "https://rapidload-docs.vercel.app/v2/:path*"
     }
   ]
+  
 }
 
 
