@@ -5,7 +5,13 @@
       "use": "@vercel/next"
     }
   ],
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "rewrites": [
+    {
+      "source": "/v2/:path*",
+      "destination": "https://rapidload-docs.vercel.app/:path*"
+    }
+  ]
 }
 
 
