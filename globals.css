@@ -92,3 +92,11 @@ img {
   background-color: #7f54b336 !important;
   color: #7f54b3 !important;
 }
+
+.nextra-toc ._text-primary-600 {
+  color: #7f54b3 !important;
+}
+
+.faq-item:hover {
+  background-color: transparent !important;
+}
