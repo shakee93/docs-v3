@@ -32,6 +32,10 @@
       "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
     },
     {
+      "source": "/guides/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/guides/:path*"
+    },
+    {
       "source": "/v2/features/:path*",
       "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
     },
