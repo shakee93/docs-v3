@@ -36,6 +36,10 @@
       "destination": "https://rapidload-docs.vercel.app/v2/guides/:path*"
     },
     {
+      "source": "/getting-started/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/getting-started/:path*"
+    },
+    {
       "source": "/v2/features/:path*",
       "destination": "https://rapidload-docs.vercel.app/v2/features/:path*"
     },
