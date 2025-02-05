@@ -12,8 +12,20 @@
       "destination": "https://rapidload-docs.vercel.app/v2"
     },
     {
+      "source": "/v2/assets/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/assets/:path*"
+    },
+    {
+      "source": "/v2/landing/:path*",
+      "destination": "https://rapidload-docs.vercel.app/v2/landing/:path*"
+    },
+    {
       "source": "/v2/:path*",
       "destination": "https://rapidload-docs.vercel.app/v2/:path*"
+    },
+    {
+      "source": "/_nuxt/:path*",
+      "destination": "https://rapidload-docs.vercel.app/_nuxt/:path*"
     }
   ]
 }
