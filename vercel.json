@@ -9,7 +9,7 @@
   "rewrites": [
     {
       "source": "/v2",
-      "destination": "https://rapidload-docs.vercel.app/v2"
+      "destination": "https://rapidload-docs.vercel.app"
     },
     {
       "source": "/v2/_nuxt/:path*",
@@ -19,7 +19,7 @@
       "source": "/v2/assets/:path*",
       "destination": "https://rapidload-docs.vercel.app/assets/:path*"
     },
-    
+
     {
       "source": "/v2/landing/:path*",
       "destination": "https://rapidload-docs.vercel.app/landing/:path*"
