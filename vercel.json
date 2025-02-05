@@ -30,10 +30,6 @@
     {
       "source": "/v2/landing/:path*",
       "destination": "https://rapidload-docs.vercel.app/landing/:path*"
-    },
-    {
-      "source": "/v2/:path*",
-      "destination": "https://rapidload-docs.vercel.app/:path*"
     }
   ]
   
