@@ -12,10 +12,6 @@
       "destination": "https://rapidload-docs.vercel.app/v2"
     },
     {
-      "source": "/v2/:path*",
-      "destination": "https://rapidload-docs.vercel.app/:path*"
-    },
-    {
       "source": "/v2/_nuxt/:path*",
       "destination": "https://rapidload-docs.vercel.app/_nuxt/:path*"
     },
@@ -30,6 +26,10 @@
     {
       "source": "/v2/landing/:path*",
       "destination": "https://rapidload-docs.vercel.app/landing/:path*"
+    },
+    {
+      "source": "/v2/:path*",
+      "destination": "https://rapidload-docs.vercel.app/:path*"
     }
   ]
   
