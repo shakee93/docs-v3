@@ -8,23 +8,12 @@
   "outputDirectory": "public",
   "rewrites": [
     {
-      "source": "/v2/:path*",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": "text/html"
-        }
-      ],
-      "destination": "https://rapidload-docs.vercel.app/v2/:path*"
+      "source": "/v2",
+      "destination": "https://rapidload-docs.vercel.app/v2"
     },
     {
       "source": "/v2/:path*",
       "destination": "https://rapidload-docs.vercel.app/v2/:path*"
-    },
-    {
-      "source": "/_nuxt/:path*",
-      "destination": "https://rapidload-docs.vercel.app/_nuxt/:path*"
     }
   ]
 }
