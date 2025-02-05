@@ -21,7 +21,7 @@ export default {
   head: (
     <>
       <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-      <title>RapidLoad 3.0</title>
+      <title>RapidLoad Docs</title>
     </>
 
   ),
