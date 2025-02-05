@@ -25,7 +25,7 @@
     },
     {
       "source": "/v2/:path*",
-      "destination": "https://rapidload-docs.vercel.app/v2/:path*"
+      "destination": "https://rapidload-docs.vercel.app/:path*"
     }
   ]
   
