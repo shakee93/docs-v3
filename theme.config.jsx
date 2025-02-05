@@ -17,8 +17,18 @@ export default {
 </svg>
     </>
   ),
+
+  head: (
+    <>
+      <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+      <title>RapidLoad 3.0</title>
+    </>
+
+  ),
+
   darkMode: false,
   hideSidebar: false,
+
   nextThemes: {
     defaultTheme: "light",
     enableSystem: false,
