@@ -17,7 +17,7 @@
     },
     {
       "source": "/v2/api/:path*",
-      "destination": "https://rapidload-docs.vercel.app/api/:path*"
+      "destination": "https://rapidload-docs.vercel.app/v2/api/:path*"
     },
     {
       "source": "/v2/assets/:path*",
