@@ -29,76 +29,118 @@ import { Cards } from 'nextra/components'
 <Cards className="cards-container">
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
          <div className="card-title">
           CSS Optimization
         </div>
         <div className="card-description">
           Optimize your site’s CSS to improve loading time
-        </div>
+          </div>
       </div>
+      </div>
+
     }
     href="/custom-settings/css"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           JavaScript Optimization
         </div>
         <div className="card-description">
           Improve JavaScript performance
         </div>
       </div>
+      </div>
     }
     href="/custom-settings/js"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Image Optimization
         </div>
         <div className="card-description">
           Enhance how images load on your website
         </div>
       </div>
+      </div>
+
     }
     href="/custom-settings/image"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Font Optimization
         </div>
+
         <div className="card-description">
           Improve loading times for fonts
         </div>
       </div>
+      </div>
     }
     href="/custom-settings/font"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Cache Optimization
+
         </div>
         <div className="card-description">
           Optimize caching strategies for your website.
         </div>
       </div>
+      </div>
     }
-    href="/custom-settings/cache"
+      href="/custom-settings/cache"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           CDN Optimization
@@ -107,8 +149,14 @@ import { Cards } from 'nextra/components'
         Manage content delivery through a CDN to improve global site loading speed.
         </div>
       </div>
+      </div>
     }
     href="/custom-settings/cdn"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
 </Cards>

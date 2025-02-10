@@ -29,127 +29,202 @@ import { Cards } from 'nextra/components'
 <Cards className="cards-container">
     <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Automatic Renewal
+
         </div>
         <div className="card-description">
           Details about how your subscription renews automatically and managing this option.
         </div>
       </div>
+      </div>
     }
       href="/manage-accounts/automatic-renewal"
+      onMouseEnter={(e) => {
+        e.preventDefault();
+        e.target.removeAttribute('title');
+      }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Cancel Subscription
+
         </div>
         <div className="card-description">
           Instructions on how to cancel your subscription to RapidLoad.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/cancel-subscription"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
     <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Change or Reset your Password
         </div>
         <div className="card-description">
           Guidelines for updating or recovering your account password.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/change-or-reset-your-password"
+
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
     <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Delete Account
         </div>
         <div className="card-description">
           Steps to permanently delete your RapidLoad account.
         </div>
+      </div>  
       </div>
     }
     href="/manage-accounts/delete-account"
+
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
     <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Where's my Invoice
+
         </div>
         <div className="card-description">
           Information on accessing and downloading your subscription invoices.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/find-invoice"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
     <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Licenses
+
         </div>
         <div className="card-description">
           Overview of managing and activating licenses for RapidLoad.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/licenses"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
 
+
   <Cards.Card
-    title={
+          title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Manage Subscription
+
         </div>
         <div className="card-description">
           Instructions for updating or modifying your subscription plan.
         </div>
       </div>
-    }
-    href="/manage-accounts/manage-subscription"
-  />
+      </div>
+      }
+      href="/manage-accounts/manage-subscription"
+
+      onMouseEnter={(e) => {
+        e.preventDefault();
+        e.target.removeAttribute('title');
+      }}
+    />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Referral Program
         </div>
         <div className="card-description">
           Details about earning rewards by referring others to RapidLoad.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/referral-program"
+
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Update Details
         </div>
         <div className="card-description">
           Steps to update your account information.
         </div>
       </div>
+      </div>
     }
     href="/manage-accounts/update-details"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
 </Cards>

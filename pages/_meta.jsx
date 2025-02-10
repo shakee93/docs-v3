@@ -1,36 +1,47 @@
 
 export default {
  
+  "rapidload-3-migration": {
+    title: 'RapidLoad 3.0 Migration',
+    sidebar: true,
+      order: 1,
+  },
+
   "getting-started": {
     title: 'Getting Started',
     sidebar: true,
-    order: 1,
+    order: 2,
   },
+
+
   "using-plugin": {
     title: 'Using Plugin',
     sidebar: true,
-    order: 2,
+    order: 3,
   },
   "custom-settings": {
     title: 'Custom Settings',
     sidebar: true,
-    order: 3
+    order: 4
   },
+
   "general-settings": {
     title: "General Settings",
     sidebar: true,
-    order: 4
+    order: 5
   },
   "manage-accounts": {
     title: 'Manage Accounts',
     sidebar: true,
-    order: 5,
+    order: 6,
   },
+
   faq: {
     title: 'FAQ',
     sidebar: true,
-    order: 6,
+    order: 7,
   },
+
 
   //Navbar
   index: {

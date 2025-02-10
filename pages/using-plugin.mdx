@@ -29,43 +29,67 @@ import { Cards } from 'nextra/components'
 <Cards className="cards-container">
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Dashboard
+
         </div>
         <div className="card-description">
          An overview of your RapidLoad account, including CDN usage, cache summary, and performance scores.
         </div>
       </div>
+    </div>
     }
     href="/using-plugin/dashboard-overview"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
+
           Optimizer
         </div>
         <div className="card-description">
           A centralized interface to configure and apply all optimizations.
         </div>
       </div>
+      </div>
     }
     href="/using-plugin/optimizer-overview"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Test Mode
+
         </div>
         <div className="card-description">
           Learn how to use Test Mode to test changes without affecting your live website.
         </div>
       </div>
+      </div>
     }
     href="/using-plugin/test-mode"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
 </Cards>

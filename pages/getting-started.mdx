@@ -27,6 +27,7 @@ import { Cards } from 'nextra/components'
 <Cards className="cards-container">
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Installation
@@ -35,21 +36,36 @@ import { Cards } from 'nextra/components'
           A step-by-step guide to setting up RapidLoad on your WordPress site.
         </div>
       </div>
+      </div>
     }
     href="/getting-started/installation"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
+
 
   <Cards.Card
     title={
+      <div title=" ">
       <div className="card-body">
         <div className="card-title">
           Quick Wizard
+
         </div>
         <div className="card-description">
           A walkthrough tool to help you configure essential optimization settings quickly.
         </div>
       </div>
+      </div>
     }
     href="/getting-started/quick-wizard"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 </Cards>

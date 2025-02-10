@@ -197,30 +197,37 @@ import "cal-sans";
   
   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '30px', flexWrap: 'wrap' }}>
   
-  <Cards.Card
-    title={
-      <div>
-         <img src="/images/get-start-icon.png" alt="Getting Started Icon" className="card-img" />
-         <div className="card-title">
-          Getting Started
-        </div>
-        <div className="card-description">
-          Install and set up RapidLoad  <br/>
-          in just a few steps.
-        </div>
-        <button className="button-pill" style={{ backgroundColor: '#0000000D' }}>
-          Start learning
-        </button>
+<Cards.Card
+  title={
+    <div title=" ">
+      <img src="/images/get-start-icon.png" alt="Getting Started Icon" className="card-img" />
+      <div className="card-title">
+        Getting Started
       </div>
-    }
-    href="/getting-started"
-  />
+      <div className="card-description">
+        Install and set up RapidLoad<br/>
+        in just a few steps.
+      </div>
+      <button 
+        className="button-pill" 
+        style={{ backgroundColor: '#0000000D' }}
+      >
+        Start learning
+      </button>
+    </div>
+  }
+  href="/getting-started"
+  onMouseEnter={(e) => {
+    e.preventDefault();
+    e.target.removeAttribute('title');
+  }}
+/>
 
   
 
   <Cards.Card
     title={
-      <div>
+      <div title=" ">
          <img src="/images/overview.png" alt="Manage Account Icon" className="card-img" />
          <div className="card-title">
           Using Plugin
@@ -235,11 +242,16 @@ import "cal-sans";
       </div>
     }
     href="/using-plugin"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
     <Cards.Card
     title={
-       <div>
+       <div title=" ">
         <img src="/images/features.png" alt="Manage Account Icon" className="card-img" />
          <div className="card-title">
           Custom Settings
@@ -254,14 +266,19 @@ import "cal-sans";
       </div>
     }
     href="/custom-settings"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
   </div>
+
 
   <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '30px', flexWrap: 'wrap' }}>
   
   <Cards.Card
     title={
-       <div>
+       <div title=" ">
          <img src="/images/gen-settings.png" alt="Manage Account Icon" className="card-img" />
          <div className="card-title">
           General Settings
@@ -276,14 +293,20 @@ import "cal-sans";
       </div>
     }
     href="/general-settings"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
 
   <Cards.Card
     title={
-      <div>
+      <div title=" ">
          <img src="/images/manage-account.png" alt="Manage Account Icon" className="card-img" />
          <div className="card-title">
+
           Manage Account
         </div>
         <div className="card-description">
@@ -296,13 +319,19 @@ import "cal-sans";
       </div>
     }
     href="/manage-accounts"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
+
 
   <Cards.Card
     title={
-       <div>
+       <div title=" ">
          <img src="/images/faq.png" alt="Manage Account Icon" className="card-img" />
          <div className="card-title">
+
           FAQ
         </div>
         <div className="card-description">
@@ -315,8 +344,13 @@ import "cal-sans";
       </div>
     }
     href="/faq"
+    onMouseEnter={(e) => {
+      e.preventDefault();
+      e.target.removeAttribute('title');
+    }}
   />
   </div>
+
 </Cards>
 
 <hr style={{ width: '75%', border: '1px solid #DEDEDE', margin: '20px auto' }} />
