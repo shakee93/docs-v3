@@ -2,7 +2,10 @@
 export default {
  
   "rapidload-3-migration": {
-    title: 'RapidLoad 3.0 Migration',
+    title: 
+    <div>
+      <span>3.0 Migration</span>
+    </div>,
     sidebar: true,
       order: 1,
   },

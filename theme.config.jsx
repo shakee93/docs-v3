@@ -41,8 +41,8 @@ export default {
   banner: {
     key: 'announcement',
     content: () => <span>
-      🎉 RapidLoad 3.0 Coming Soon 🎉
-    </span>,
+      🎉 RapidLoad 3.0 is released! Follow this guide to migrate to the new version. <a href="/rapidload-3-migration" style={{ textDecoration: 'underline', color: '#7f54b3' }}>Read more →</a> 🎉
+    </span>
   },
   footer: {
     component: () =>
