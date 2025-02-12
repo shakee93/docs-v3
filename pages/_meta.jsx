@@ -1,10 +1,23 @@
-
 export default {
  
   "rapidload-3-migration": {
     title: 
     <div> 
-      <span>3.0 Migration</span>
+      <span>
+        <img 
+          src="/images/migration-icon.svg" 
+          style={{
+            width: '25px', 
+            // height: '25px', 
+            borderRadius:'0',
+            border:'none',
+            display:'inline-block',
+            marginRight:'8px',
+            
+          }} 
+        />
+        3.0 Migration
+      </span>
     </div>,
     sidebar: true,
       order: 1,
