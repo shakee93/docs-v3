@@ -84,12 +84,6 @@ export default {
     <>
       <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
       <title>RapidLoad Docs</title>
-
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-WLJ2GHT2C7`}
-      />
-      
     </>
   ),
 
