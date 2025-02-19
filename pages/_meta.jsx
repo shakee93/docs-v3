@@ -78,7 +78,7 @@ export default {
       "version2.0": {
         "title": "Version 2.0",
         "type": "page",
-        "href": "https://docs.rapidload.io/v2",
+        "href": "https://docs.rapidload.ai/v2",
         "newWindow": true
       },
       "version1.0": {
@@ -100,13 +100,13 @@ export default {
   Account: {
     title: 'Account',
     type: 'page',
-    href: 'https://app.rapidload.io/',
+    href: 'https://app.rapidload.ai/',
     // "display": "hidden"
   },
   SignUp: {
     title: 'Sign Up',
     type: 'page',
-    href: 'https://rapidload.io/signup/',
+    href: 'https://rapidload.ai/signup/',
     // "display": "hidden"
   },
   Twitter: {

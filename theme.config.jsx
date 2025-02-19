@@ -124,13 +124,13 @@ export default {
             }}
           >
             <a
-              href="https://rapidload.io/terms-conditions/"
+              href="https://rapidload.ai/terms-conditions/"
               style={{ margin: "5px 0" }}
             >
               Terms
             </a>
             <a
-              href="https://rapidload.io/privacy-policy/"
+              href="https://rapidload.ai/privacy-policy/"
               style={{ margin: "5px 0" }}
             >
               Privacy Policy
