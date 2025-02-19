@@ -111,13 +111,13 @@ the bottom.
 RapidLoad will automatically regenerate unused CSS when there are content changes
 in the currently generated files.
 
-### The reasons to manually regenerate would be
+**The reasons to manually regenerate would be**
 
 * **Failed status:** A blinking red dot with the text "_Failed_" indicates that
 Unused CSS generation has failed; hover over the dot to see the reason, resolve 
 the issue, and regenerate the Unused CSS.
 
-*  **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
+* **Waiting in queue status:** RapidLoad generates Unused CSS on a first-in, 
 first-out basis; refer to the "Managing the Job Table" documentation for details.
 If the URL you’re viewing is in the optimization queue, this message will appear;
 to prioritize it, you can regenerate the URL.
@@ -128,3 +128,31 @@ documentation for guidance on resolving the issue.
 
 To understand how the Unused CSS generation and Critical CSS generation job 
 tables work, please refer to the documentation.
+
+## Exclude CSS from Unused CSS
+
+There may be cases where certain CSS files should remain untouched by Unused CSS
+optimization. RapidLoad makes it easy to exclude these files to avoid issues with
+your design and functionality.
+
+**How to Access the Exclude from Unused CSS Option:**
+
+1. **Go to the Optimize tab** in the RapidLoad plugin.
+2. Click on the **Customize Settings** dropdown.
+3. Scroll to the **CSS section** and locate the **Remove Unused CSS** option.
+4. Click the **Settings** next to it.
+5. Enter the **file paths or patterns** for CSS you want to exclude.
+6. Click **Save Changes** to apply your exclusions.
+
+
+**Examples of Valid Exclusions:**
+
+Example URL : `https://example.com/wp-content/plugins/example-plugin/example-folder-1/example.css`
+
+* **Plugin:** `/{plugin folder name}/` - `"/example-plugin/"`
+* **Plugin subfolder:** `/{plugin subfolder name}/` - `"/example-folder-1/"`
+* **Specific file name:** `"example.css"`
+
+<Callout type="error" emoji="️📌">
+**Note:** Excluded files will not be optimized by RapidLoad.
+</Callout>

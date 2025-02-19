@@ -40,8 +40,6 @@ By enabling this feature, your website’s Core Web Vitals metrics improve, deli
 
 RapidLoad optimizes the performance of your site by delay. It offers two types of delay methods to suit different use cases:
 
-switch methods
-
 ### All Files Delay (Default)
 
 This method delays all inline and external JavaScript files on your site.
@@ -108,6 +106,12 @@ This method delays all inline and external JavaScript files on your site.
         <script src="https://example.com/js/script.js"></script>
         ```
 
+
+<Callout emoji="💡">
+  To learn how to exclude specific files from being delayed in **All Files Delay**, please refer to the [Exclude Files](/custom-settings/js/delay-js#exclusions) page.
+  </Callout>
+
+
 ### Selected Files Delay
 
 a. **Delaying Specific Files**: To delay specific files, you only need to input part of the file name. For example, 
@@ -124,3 +128,34 @@ When specifying a string to delay files, ensure it is unique to the intended scr
 another script or file, both scripts will be delayed. To avoid this, use precise strings that uniquely identify the target scripts 
 or paths.
 </Callout>
+
+## Exclusions
+
+
+### All Files Delay
+
+In some cases, there may be JavaScript files that should not be delayed to ensure
+proper functionality of your website. With RapidLoad, you can easily exclude 
+specific files from the Delay JavaScript optimization to prevent delays that 
+could affect essential interactions or critical features.
+
+**Examples of Valid Exclusions:**
+
+* Critical Inline Scripts: `gtag`, `gtm` (e.g., analytics, tracking code)
+* Essential External Scripts: `https://example.com/js/important-script.js`
+* Third-Party Integrations: Scripts for services like chat widgets, payment gateways, or forms that should load immediately.
+* Site Functionality Scripts: Scripts controlling critical features (e.g., navigation, login forms).
+
+**How to Exclude Files from Delay JavaScript in RapidLoad:**
+
+1. Navigate to the **Optimize** tab in the RapidLoad plugin.
+2. Click on the **Customize Settings** dropdown.
+3. Locate the **JavaScript** section and find the **Delay JavaScript Exclusions** option.
+4. Click the **Settings** next to it.
+5. Enter the file paths, names, or patterns for scripts you want to exclude from delay.
+6. Click **Save Changes** to apply your exclusions.
+
+Excluding files from the Delay JavaScript feature ensures that critical 
+resources load immediately, maintaining functionality without sacrificing 
+the performance benefits of deferring non-essential scripts.
+
