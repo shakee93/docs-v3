@@ -74,7 +74,7 @@ export default {
             }}
           >
             <a
-              href="https://x.com/_rapidload"
+              href="https://x.com/rapidload_ai"
               style={{ color: "#fff", margin: "0 10px" }}
             >
               <svg
