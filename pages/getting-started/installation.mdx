@@ -50,6 +50,68 @@ For manual installation, you will need to upload the plugin files to your web se
 
 The RapidLoad plugin is now installed and ready to use
 
+## Can't Install/Upload RapidLoad plugin
+
+When uploading the RapidLoad plugin via the WordPress dashboard, you might encounter this error:
+
+"**The uploaded file exceeds the upload_max_filesize directive in php.ini.**"
+
+This happens when the plugin file size exceeds the server’s upload limit.
+
+### How to Fix This Issue
+
+#### Manual Fix
+
+It's possible to increase the upload limit using one of the methods below. The method that works may vary depending on your server setup and hosting provider. You don’t need to edit all these files simply 
+find the one that applies to your site.
+
+In the examples below, "**64M**" represents a **64MB** file size limit. You can adjust this value as needed, but avoid setting it excessively high.
+
+<Callout type="info" emoji=" ">
+  **Important:** Before making any changes, ensure you back up your files.
+</Callout>
+
+
+1. **Modify .htaccess (For Apache Servers)**
+
+Add the following lines at the end of your .htaccess file (located in the root folder of your site):
+
+```php copy
+php_value upload_max_filesize 64M
+```
+
+2. **Edit php.ini (If You Have Access)**
+
+If you can access your server’s php.ini file, update:
+
+```php copy
+upload_max_filesize = 64M
+```
+Restart your web server if needed.
+
+3. **Update wp-config.php**
+
+Add this line to your wp-config.php file:
+
+```php copy
+@ini_set('upload_max_filesize', '64M');
+```
+
+#### Quick Fixes
+
+1. You can Install the [RapidLoad plugin via the FTP](installation#manual-installation)
+2. Use a plugin: Install [WP Increase Upload Filesize](https://wordpress.org/plugins/wp-upload-size/) or [Increase Maximum Upload File Size](https://wordpress.org/plugins/upload-max-file-size/) to adjust the limit.
+3. Contact your hosting provider: If the issue persists, request an increase in the `upload_max_filesize` limit from your hosting provider.
+
+### How to Check the File Size Limit
+
+To confirm if the upload limit has increased:
+1. Go to **Media** → **Add New** in your WordPress dashboard.
+2. Check the **Maximum upload file size** displayed below the upload area.
+
+<img style={{ marginTop: '32px' }} 
+src="/images/upload-limit.png" alt="Upload Limit" />
+
 ## Updates & Rollback
 
 **How to Update**
