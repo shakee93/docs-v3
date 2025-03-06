@@ -4,24 +4,51 @@ title: Installation
 
 import { Callout } from 'nextra/components'
 
+# Installing RapidLoad
+
 ## Minimum Requirements
 
 *   WordPress version 5.0 or Above
 *   PHP version 5.6 or Above
 *   A working WP-Cron 
 
-## Installing RapidLoad
+## Downloading RapidLoad
+After purchasing a RapidLoad license, you can download the plugin directly from the Thank You page or via this [link](https://rapidload.io/download).
 
+<Callout emoji=" ">
+  **Important Note for Safari Users.** 
+</Callout>
 
-**Step 1: Find the plugin in WordPress repository**
-*   Search RapidLoad in the WordPress Plugins Directory. 
+Safari may automatically unzip the downloaded file, which can cause issues during installation. To prevent this, you can either manually re-zip the file or disable automatic unzipping by following these 
+steps:
 
-**Step 2: Install the plugin**
-*   Click "_Install Now_," and the plugin will be installed. 
+- Open Safari and go to Settings.
+- Uncheck the option "Open safe files after downloading."
 
-**Step 3: Activate and begin setup**
-*   Click "_Activate_," and you'll be guided through the onboarding process.
+This ensures you receive the plugin as a ZIP file, which is required for installation via the WordPress dashboard.
 
+<img style={{ marginTop: '32px' }} 
+src="/images/safari-untick.png" alt="Safari Untick" />
+
+RapidLoad can be installed using two methods: Automatic Installation and Manual Installation.
+
+### Automatic Installation
+The easiest way to install RapidLoad is through your WordPress dashboard. Follow these steps to install:
+
+1. Log in to your **WordPress admin panel**.
+2. Navigate to **Plugins** -> click **Add New** and click **Upload Plugin**.
+3. Select the RapidLoad ZIP file and click **Install Now**.
+4. When prompted, confirm the installation, and WordPress will automatically complete the process.
+
+### Manual Installation
+
+For manual installation, you will need to upload the plugin files to your web server using an FTP client. Follow these steps:  
+
+1. Unzip the RapidLoad archive.  
+2. Upload the RapidLoad folder to the `/wp-content/plugins/` directory on your server.  
+3. Log in to your WordPress admin panel and activate the plugin from the Plugins section.  
+
+The RapidLoad plugin is now installed and ready to use
 
 ## Updates & Rollback
 
