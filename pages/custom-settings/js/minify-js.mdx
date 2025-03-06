@@ -35,10 +35,25 @@ loading. It improves website speed, enhances user experience, and boosts SEO wit
 7. **Re-minification on Version Change:**
     *   RapidLoad will re-minify and serve files if the original files undergo version changes.
 
-## Automatic Exclusions
+## Excluding Files from Minify JavaScript Optimization
 
-1. **Third-party JavaScript Files:**
-    *   JavaScript hosted on a different domain is excluded from optimization.
+In some cases, you may want to prevent specific JavaScript files from being minified. RapidLoad allows you to easily exclude files 
+from Minify JavaScript optimization to ensure certain scripts remain untouched and function as intended.
 
-2. **Already Minified Files:**
-    *   Files marked with the `.min.js` extension are automatically skipped.
+**Examples of Valid Exclusions:**
+
+- Third-Party JavaScript: Scripts hosted on external domains (e.g., Google Analytics, chat widgets).
+- Already Minified Files: JavaScript files already optimized with the `.min.js` extension.
+- Custom Scripts: Files critical to your site's functionality that may not work well when minified (e.g., specific vendor scripts or custom interactions).
+
+**How to Exclude Files from Minify JavaScript in RapidLoad:**
+
+1. **Navigate to the Optimize tab** in the RapidLoad plugin.
+2. Click on the **Customize Settings** dropdown.
+3. **Find the JavaScript section** and locate the **Minify JavaScript Exclusions** option.
+4. Click the **Settings** next to it.
+5. **Enter the file paths, names, or patterns** for scripts you want to exclude from minification. 
+6. **Click Save Changes** to apply your exclusions.
+
+By excluding specific files, you ensure that critical scripts are not unintentionally modified, while still optimizing other 
+JavaScript files for better performance.

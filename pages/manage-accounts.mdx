@@ -27,6 +27,28 @@ import { Cards } from 'nextra/components'
 `}</style>
 
 <Cards className="cards-container">
+    
+    <Cards.Card
+    title={
+      <div title=" ">
+      <div className="card-body">
+        <div className="card-title">
+          Login
+
+        </div>
+        <div className="card-description">
+          Details about how to login to your RapidLoad account.
+        </div>
+      </div>
+      </div>
+    }
+      href="/manage-accounts/login"
+      onMouseEnter={(e) => {
+        e.preventDefault();
+        e.target.removeAttribute('title');
+      }}
+  />
+    
     <Cards.Card
     title={
       <div title=" ">
